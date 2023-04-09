@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+
+    <title>sidebar</title>
+    <style>
+        .flex {
+      display: flex;
+      margin-top: 20px;
+      padding: 10px;
+    }
+    .button {
+      text-align: center;
+    }
+    .file{
+        display: flex;
+        justify-content: space-around;
+        padding-left:250px;
+    }
+    .imcon{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-row-gap: 20px;
+        grid-column-gap: 10px;
+    }
+
+    .grid{
+        display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(330px,1fr));
+    gap: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <button id='navButton'>
+        <div hidden class="close-btn">X
+
+        </div>
+        <div class="hamburger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+    </button>
+    <nav>
+        <div id="roadmap-container">
+            <a href="#" class='menu-item'>DEPARTMENT OF SOM</a>
+
+        </div>
+        <div class="menu-link ic">
+            <i class="material-icons">home</i>
+
+            <a href="#roadmap-article" class="menu-item"
+                style="margin-left: 6px;font-size: 1.1rem;color: rgb(36, 36, 36);">Home</a>
+
+        </div>
+
+        <div class="menu-link ic">
+            <i class="material-icons">local_library</i>
+
+            <a href="#coursematerial" class="menu-item"
+                style="margin-left: 6px;font-size: 1.1rem;color: rgb(36, 36, 36);">Course Material</a>
+
+        </div>
+        <div class="menu-link ic">
+            <i class="material-icons">calendar_today</i>
+
+            <a href="#roadmap-article" class="menu-item"
+                style="margin-left: 6px;font-size: 1.1rem;color: rgb(36, 36, 36);">Academic Calendar</a>
+
+        </div>
+        <div class="menu-link ic">
+            <i class="material-icons">dynamic_feed</i>
+            <button data-list="2" class="menu-dropdown-item" style="font-family: 'poppins';">Facilities
+                <i id="sublist-2-arrow" class="material-icons">arrow_drop_down</i>
+
+            </button>
+            <ul id="sublist-2" hidden>
+                <li><a href="#lab" class=" menu-item">Lab</a></li>
+                <li><a href="#library" class=" menu-item">Library</a></li>
+            </ul>
+        </div>
+        <div class="menu-link ic">
+            <i class="material-icons">build</i>
+            <button data-list="3" class="menu-dropdown-item" style="font-family: 'poppins';">Research
+                <i id="sublist-3-arrow" class="material-icons">arrow_drop_down</i>
+
+            </button>
+            <ul id="sublist-3" hidden>
+                <li><a href="" class=" menu-item">MOUs</a></li>
+                <li><a href="" class=" menu-item">Ph.D completed & Registered</a></li>
+                <li><a href="" class=" menu-item">Proposals</a></li>
+                <li><a href="" class=" menu-item">Patents</a></li>
+                <li><a href="" class=" menu-item">Journal Publications</a></li>
+                <li><a href="" class=" menu-item">Conference Publications</a></li>
+                <li><a href="" class=" menu-item">Situation Satistics</a></li>
+                <li><a href="" class=" menu-item">Books/Books Chapter Published</a></li>
+                <li><a href="" class=" menu-item">SIG-Faculty</a></li>
+
+            </ul>
+        </div>
+        <div class="menu-link ic">
+            <i class="material-icons">people</i>
+            <button data-list="4" class="menu-dropdown-item" style="font-family: 'poppins';">People
+                <i id="sublist-4-arrow" class="material-icons">arrow_drop_down</i>
+
+            </button>
+            <ul id="sublist-4" hidden>
+                <li><a href="#roadmap-article" class=" menu-item">Faculty</a></li>
+                <li><a href="#roadmap-article" class=" menu-item">Supporting Staff</a></li>
+            </ul>
+        </div>
+        <div class="menu-link ic">
+            <i class="material-icons">wb_incandescent</i>
+            <button data-list="5" class="menu-dropdown-item" style="font-family: 'poppins';">Activities
+                <i id="sublist-5-arrow" class="material-icons">arrow_drop_down</i>
+
+            </button>
+            <ul id="sublist-5" hidden>
+                <li><a href="#events" class=" menu-item">Events</a></li>
+                <li><a href="#clubs" class=" menu-item">Clubs</a></li>
+            </ul>
+        </div>
+        <div class="menu-link ic">
+            <i class="material-icons">emoji_events</i>
+            <button data-list="6" class="menu-dropdown-item" style="font-family: 'poppins';">Achievements
+                <i id="sublist-6-arrow" class="material-icons">arrow_drop_down</i>
+
+            </button>
+            <ul id="sublist-6" hidden>
+                <li><a href="#placements" class=" menu-item">Placements</a></li>
+            </ul>
+        </div>
+    
+        <div class="menu-link ic">
+            <i class="material-icons">local_library</i>
+
+            <a href="#roadmap-article" class="menu-item"
+                style="margin-left: 6px;font-size: 1.1rem;color: rgb(36, 36, 36);">Higher Studies</a>
+
+        </div>
+        
+        <div class="menu-link ic">
+            <i class="material-icons">photo</i>
+
+            <a href="#testimonials" class="menu-item"
+                style="margin-left: 6px;font-size: 1.1rem;color: rgb(36, 36, 36);">Testimonials</a>
+
+        </div>
+        <div class="menu-link ic">
+            <i class="material-icons">photo</i>
+
+            <a href="#gallery" class="menu-item"
+                style="margin-left: 6px;font-size: 1.1rem;color: rgb(36, 36, 36);">Gallery</a>
+
+        </div>
+
+    </nav>
+    <main>
+
+        <article id="roadmap-article" class="active-article">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="http://117.239.103.188/media/image/IMG_20200122_101332_1.jpg" alt="">
+                    <!-- <div class="info">
+                    <h2>Title</h2>
+                    <p>Description here</p>
+                  </div> -->
+                </div>
+                <div class="slide">
+                    <img src="http://117.239.103.188/media/image/IMG_20200122_101332_1.jpg" alt="">
+                    <!-- <div class="info">
+                    <h2>Title</h2>
+                    <p>Description here</p>
+                  </div> -->
+                </div>
+                <div class="slide">
+                    <img src="http://117.239.103.188/media/image/IMG_20200122_101332_1.jpg" alt="">
+                    <!-- <div class="info">
+                    <h2>Title</h2>
+                    <p>Description here</p>
+                  </div> -->
+                </div>
+                <div class="slide">
+                    <img src="http://117.239.103.188/media/image/IMG_20200122_101332_1.jpg" alt="">
+                    <!-- <div class="info">
+                    <h2>Title</h2>
+                    <p>Description here</p>
+                  </div> -->
+                </div>
+                <div class="slide">
+                    <img src="http://117.239.103.188/media/image/IMG_20200122_101332_1.jpg" alt="">
+                    <!-- <div class="info">
+                    <h2>Titl</h2>
+                    <p>Description here</p>
+                  </div> -->
+                </div>
+                <div class="navigation">
+                    <i class="fas fa-chevron-left prev-btn"></i>
+                    <i class="fas fa-chevron-right next-btn"></i>
+                </div>
+
+            </div>
+
+            <div class="det">
+                <div class="depname">
+                    <h3 style="margin-left: 10px;color: darkblue;">DEPARTMENT OF SCHOOL OF MANAGEMENT</h3>
+                    <hr>
+                </div>
+                <div class="depdet">
+                    <div class="contp">
+                        <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">ABOUT DEPARTMENT</h3>
+                        <p>TThe School of Management (SoM) is one of the pioneering institutions in
+                            the Manchester of South to impart quality education, research and
+                            innovation for the graduates to make a better world since 1997. The SoM
+                            is a beautiful campus tucked away in a quiet scenic corner of Kovaipudur,
+                            Coimbatore which provides a perfect setting for the students to learn in a
+                            state-of-the-art infrastructure and grow in tranquility. SoM is geared up
+                            to provide quality services to students not only in terms of employment,
+                            but also employability. Reputed companies like Think & Learn Byju’s, ABFR
+                            ltd, Amazon, Roots Industries, Object win Technology Pvt. Ltd, 99accres.com,
+                            ITC Corporation, H&R Johnson Tiles, CUB, CSB, ICICI Securities limited, Oracle,
+                            Sharekhan, Karvy Stock Broking Limited, Zoho Corporation, NDOT Technologies, Home
+                            First Finance and many others are visiting our campus continuously every year for
+                            recruiting our budding managers.</p>
+                    </div>
+                    <div class="contp">
+                        <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">VISION</h3>
+                        <p>To be a World Class B-School to develop Graduates of Excellence in
+                            Employment, Entrepreneurship, Business Leadership and Consultancy
+                            through innovative Technologies, Research and Contemporary Management
+                            Practices.</p>
+                    </div>
+                    <div class="contp">
+                        <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">MISSION</h3>
+                        <ul>
+                            <li>
+                                <p> 1. The mission of School of Management is to provide all the
+                                    required inputs and support the students to gain a distinctive
+                                    competitive edge and excel in the corporate world.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contp">
+                        <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">HOD's DESK</h3>
+                        <div class="imf" style="display: flex;">
+                            <div class="imgc"><img
+                                    src="http://117.239.103.188/media/image/1._Dr.Padmavathi.M_MYFsFDg.jpg" alt=""
+                                    style="height: 380px;"></div>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                It gives me immense pleasure to pen a few words as a prologue to our MBA aspirants who
+                                have
+                                stepped into the School of Management-SKCT with a churning desire to become successful
+                                professionals.
+                                It is a beautiful campus tucked away in a quiet scenic corner of Kovaipudur which
+                                provides a
+                                perfect setting for the students to learn and grow in tranquillity. Our School of
+                                Management is
+                                unique like a prism reflecting the manifold shades of learning and co-curricular
+                                activities.The
+                                very motto of our department is to provide quality education and placements with
+                                state-of-the-art
+                                infrastructure. The faculty team of SOM SKCT is fuelled by an array of highly dedicated
+                                faculty
+                                members who are committed to inculcate knowledge and values to the students in their
+                                respective
+                                domain.The efficacy of our placement cell is vivid with the most impressive job
+                                placement rates.
+                                Regular interaction with industry through collaborative projects, course requirements
+                                and general
+                                discussions on advancements in the corporate field develop an environment closer to the
+                                practical
+                                essence of preparing future managers. The emphasis is given on various activities such
+                                as Student-
+                                Centred Learning approach, Problem Based Learning, Project-Based Learning, Expert
+                                Lectures,
+                                Industry visits, Workshops and Club activities. Hoping to make each one of you realise
+                                your dream
+                                thereby helping to visualize yourself as achievers.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="contp">
+                        <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">PROGRAM EDUCTIONAL OBJECTIVES
+                        </h3>
+                        <p>The Programme will produce graduates who</p>
+                        <ul>
+                            <li>
+                                <p> PEO1. are competent, creative, innovative and highly valued
+                                    professionals in industry and academia</p>
+                            </li>
+                            <li>
+                                <p> PEO2. continue their professional development by continuous
+                                    upgradation of their knowledge and by actively pursuing
+                                    research and consultancy activities..</p>
+                            </li>
+                            <li>
+                                <p>PEO3. possess necessary managerial skills to think strategically
+                                    and to lead, motivate and manage teams effectively.</p>
+                            </li>
+                            <li>
+                                <p>PEO4. are socially responsible and ethically committed
+                                    citizens.</p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="contp">
+                        <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">PROGRAM OUTCOMES</h3>
+                        <p>PO1.Apply knowledge of management theories and practices to solve business problems.</p>
+                        <p>PO2.Foster Analytical and critical thinking abilities for data-based decision making.</p>
+                        <p>PO3.Ability to develop Value based Leadership ability. </p>
+                        <p>PO4.Ability to understand, analyze and communicate global, economic,
+                            legal, and ethical aspects of business.</p>
+                        <p>PO5.Ability to lead themselves and others in the achievement of organizational goals,
+                            contributing effectively to a team environment.</p>
+                        <p>PO6. Ability to acquire new knowledge, seek consistency and apply the same in business
+                            situations, bringing out the continuous learning culture.</p>
+                        <p>PO7. Ability to develop innovations, creativity, ideas and implement the same,
+                            ensuring value addition.</p>
+                        <p>PO8. Willingness to take up CSR activities volunteering for the benefit of the society and
+                            for improving the
+                            credibility of the organization among the stakeholders.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article hidden id="coursematerial">
+            <h3 style="color: darkorange;">COURSE MATERIAL</h3>
+            <hr>
+            <br>
+            <h4 style="color: blue;">2020-2021</h4>
+            <p>ODD SEM</p>
+            <ul>
+                <li style="list-style-type:disc; margin-left: 40px;"><a
+                        href="http://117.239.103.188/media/20PNC102-Manageial_Economics_and_Indian_Economy.pdf">
+                        20PNC102-Manageial Economics and Indian Economy</a></li>
+            </ul>
+        </article>
+
+        <article hidden id="lab">
+            <h3 style="color: darkorange;">LABORATORY</h3>
+            <hr>
+            <br>
+            <h4 style="color: blue;">CENTER OF EXCELLENCE</h4>
+            <img src="http://117.239.103.188/media/image/lab_photo.jpg"
+                style="height:160px; width: 290px; margin-left:20px;">
+            <p>The Centre of Excellence for Finance (CoE) has been established in the year 2017 by
+                SKCT-SoM for the development of faculty and students in the areas Accounting &
+                Finance, Econometrics, Financial Markets, Financial Derivatives and Risk
+                Management. In order to enrich the faculty and student knowledge business research
+                software’s like SPSS, Excel, E-Views, Gretl and R software’s are available in CoE
+                Finance. The objective of the centre is to provide industry-oriented practical
+                training in the areas of Stock simulation, Stock Trading, Financial Modeling, Mock
+                Trading and Placement Training related to finance. The CoE-finance supports 60
+                students with individual computers.</p>
+            <p>The outcome of this Centre of Excellence-Finance is to inculcate research
+                knowledge in the areas of Stationarity Analysis, Descriptive statistics,
+                Normality test, Time series analysis, Correlation, Cointegration, Causality,
+                Forecasting by using Simple and Multiple Regression, ARIMA, ARCH, GARCH and
+                financial data analytics.</p>
+            <p style="font-weight:bolder;font-size: large;">
+                The following work has been carried out with the help of the Centre of
+                Excellence- Finance.</p>
+            <ul style="list-style-type: circle;margin-left:35px;">
+                <li>Risk-Return analysis</li>
+                <li>Fundamental and Technical Analysis</li>
+                <li>Stationarity analysis</li>
+                <li>Econometric Analysis</li>
+                <li>Determining the cost of capital</li>
+                <li>Capital structure decision</li>
+                <li>Capital budgeting decisions</li>
+                <li>Financial Statement Analysis</li>
+            </ul>
+        </article>
+
+        <article hidden id="library">
+            <img src="http://117.239.103.188/media/library_photo.JPG" style="height:400px;">
+            <h3 style="color: darkorange;">DEPARTMENT LIBRARY</h3>
+            <hr>
+            <p>MBA Library is equipped with the latest volumes of management books,
+                journals (Indian and International), educational CD’s, Projects as well
+                as Back volumes. The library also has a subscription to online database
+                resources. Our library has an organized collection of 10,952 books, 37
+                print periodicals, 752 projects, 1432 back volumes, and other non-book
+                materials such as 284 CD’s, DVD’s, maps, newspapers, atlas and most
+                recent the e-books and journals. The library provides information and
+                ideas that are fundamental to functioning successfully in today’s
+                information and knowledge-based society. The goal of the Library and
+                the Digital library is to ensure that all members of the community have
+                equitable access to a variety of resources. The library provides open
+                access to all its students and staff. It serves as a “Learner- Oriented
+                Library” , which supports, extends and individualizes the curriculum.
+                It acts as a center and coordinating agency for all resources used in
+                the teaching-learning process. The ambience and the calmness of the
+                library create a positive impact on the student’s achievements and
+                progress in their self- development. It equips students with lifelong
+                learning skills and develops imagination enabling them to live as
+                responsible citizens of the country.</p>
+        </article>
+
+        <article hidden id="events">
+            <h3 style="margin-left: 10px;font-weight: 900;color: darkorange; text-align: justify;">EVENTS</h3>
+            <hr>
+             <div class="grid">
+
+                <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/WhatsApp_Image_2022-03-11_at_1.48.36_PM.jpeg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">ENTREPRENEURSHIP CONCLAVE</h4><br>
+            <p style="padding: 5px;">2022-03-16</p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2022-03-11_at_1.48.36_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2022-03-11_at_1.48.36_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            LINK</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/WhatsApp_Image_2022-03-14_at_6.21.24_PM.jpeg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">
+                AWARENESS ON CONSUMER RIGHTS</h4>
+            <p style="padding: 5px;">2022-03-15</p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2022-03-14_at_6.21.24_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2022-03-14_at_6.21.24_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            LINK</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/WhatsApp_Image_2022-03-13_at_5.50.51_PM.jpeg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">
+                NHRD COIMBATORE CHAPTER INAUGURATION</h4>
+            <p style="padding: 5px;"> 2022-03-14            </p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2022-03-13_at_5.50.51_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2022-03-13_at_5.50.51_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            LINK</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/WhatsApp_Image_2022-03-09_at_2.17.36_PM.jpeg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">DESIGN THINKING WORKSHOP</h4><br>
+            <p style="padding: 5px;">2022-03-10            </p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2022-03-09_at_2.17.36_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2022-03-09_at_2.17.36_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            LINK</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/WhatsApp_Image_2022-03-05_at_8.54.06_PM.jpeg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">BUSINESS PLAN PREPARATION</h4>
+            <p style="padding: 5px;">2022-03-03</p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2022-03-05_at_8.54.06_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2022-03-05_at_8.54.06_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            LINK</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/WhatsApp_Image_2022-02-04_at_9.39.44_PM.jpeg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">
+                RECENT TRENDS IN HR</h4>
+            <p style="padding: 5px;">2021-12-22</p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2022-02-04_at_9.39.44_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="http://117.239.103.188/media/REPORT_FOR_TODAYS_WEBINAR_12.8.21.pdf">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            DOWNLOAD FILE</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/WhatsApp_Image_2022-02-04_at_9.58.46_PM.jpeg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">CAREER OPPORTUNITY IN INDUSTRY 4.0</h4>
+            <p style="padding: 5px;">2021-12-18 </p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2022-02-04_at_9.58.46_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2022-02-04_at_9.58.46_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            DOWNLOAD FILE</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/WhatsApp_Image_2022-02-04_at_9.58.01_PM.jpeg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">
+                ALUMNI TALK</h4><br>
+            <p style="padding: 5px;">2021-12-18</p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2022-02-04_at_9.58.01_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="http://117.239.103.188/media/REPORT_FOR_TODAYS_WEBINAR_12.8.21_M0yS0qb.pdf">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            DOWNLOAD FILE</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/WhatsApp_Image_2022-02-04_at_10.28.37_PM.jpeg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">ROLE OF IT AND AUTOMATION IN RETAIL SECTOR</h4>
+            <p style="padding: 5px;">2021-12-11</p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2022-02-04_at_10.28.37_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="http://117.239.103.188/media/Report_1.doc">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            DOWNLOAD FILE</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/WhatsApp_Image_2021-11-19_at_7.47.16_AM.jpeg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">ALUMNI MEET - 2016-18 BATCH</h4><br>
+            <p style="padding: 5px;">2021-11-19</p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2021-11-19_at_7.47.16_AM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2021-11-19_at_7.47.16_AM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            LINK</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/WhatsApp_Image_2021-11-10_at_3.02.20_PM.jpeg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">CROSS CULTURAL MANAGEMENT</h4>
+            <p style="padding: 5px;">2021-11-13
+            </p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2021-11-10_at_3.02.20_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2021-11-10_at_3.02.20_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            LINK</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/WhatsApp_Image_2021-11-09_at_4.52.30_PM.jpeg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">
+                INAGURATION PROGRAMME</h4>
+            <p style="padding: 5px;">2021-11-11</p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2021-11-09_at_4.52.30_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2021-11-09_at_4.52.30_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            LINK</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/WhatsApp_Image_2021-08-22_at_9.39.43_PM.jpeg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">IND
+                TURNING DREAMS INTO BUSINESSUSTRIAL TRAINING PRESENTATION</h4>
+            <p style="padding: 5px;">2021-08-23</p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2021-08-22_at_9.39.43_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="https://meet.google.com/avp-qevd-dkh">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            LINK</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/WhatsApp_Image_2022-02-04_at_9.31.39_PM.jpeg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">BUILDING INNOVATION/PRODUCT FIT TO MARKET</h4><br>
+            <p style="padding: 5px;">2021-07-24</p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2022-02-04_at_9.31.39_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="http://117.239.103.188/media/REPORT_ON_WEBINAR_-_TURNING_DREAMS_INTO_BUSINESS.pdf">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            DOWNLOAD FILE</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/WhatsApp_Image_2022-02-04_at_9.31.23_PM.jpeg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">
+                ENTER-PRUNE-YOU-SHIP</h4><br>
+            <p style="padding: 5px;">2021-06-14</p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2022-02-04_at_9.31.23_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2022-02-04_at_9.31.23_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            LINK</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/WhatsApp_Image_2021-05-27_at_5.09.15_PM.jpeg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">
+                WEBINAR ON "GET START WITH CRYPTO-FINTECH OF 21ST CENTURY"</h4>
+            <p style="padding: 5px;">2021-05-28</p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2021-05-27_at_5.09.15_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2021-05-27_at_5.09.15_PM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            LINK</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/WhatsApp_Image_2020-12-04_at_8.56.56_AM.jpeg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">
+                MBA ORIENTATION PROGRAMME</h4><br>
+            <p style="padding: 5px;">2020-12-04</p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/WhatsApp_Image_2020-12-04_at_8.56.56_AM.jpeg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="https://www.youtube.com/watch?v=B3SiRykzxvs">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            LINK</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/webinar_-_journey_of_an_entrepreneur.jpg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">
+                WEBINAR ON JOURNEY OF AN ENTREPRENEUR</h4>
+            <p style="padding: 5px;">2020-04-28</p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/webinar_-_journey_of_an_entrepreneur.jpg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/webinar_-_journey_of_an_entrepreneur.jpg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            LINK</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/webinar_-_campus_to_corporate.jpg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">
+                WEBINAR ON CAMPUS TO CORPORATE</h4>
+            <p style="padding: 5px;">2020-04-20</p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/webinar_-_campus_to_corporate.jpg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/webinar_-_campus_to_corporate.jpg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            LINK</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/womens_day1_EVQHrTF.jpg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">
+                WOMEN ENTREPRENEUR'S MEET</h4><br>
+            <p style="padding: 5px;">2020-03-09</p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/womens_day1_EVQHrTF.jpg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/womens_day1_EVQHrTF.jpg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            LINK</button></a>
+
+                </div>
+            </div>
+        </div>
+             </div>
+            
+        </article>
+
+        <article hidden id="clubs">
+            <h3 style="margin-left: 10px;font-weight: 900;color: 
+            darkorange; text-align: justify;">CLUB</h3>
+            <hr>
+            <h4 style="color: blue;">MARKETING CLUB</h4>
+            <img src="http://117.239.103.188/media/image/marketing_club1.jpg"
+            style="height: 200px;width:350px; margin-left: 20px;margin-top:10px;">
+            <p>OBJECTIVES: To enhance oneself in marketing and market development position. 
+                Analyze and improve sales and marketing skills.</p><br>
+
+            <h4 style="color: blue;">FINANCE CLUB</h4>
+            <img src="http://117.239.103.188/media/image/finance_lab.jpg"
+            style="height: 200px;width:350px; margin-left: 20px;margin-top:10px;">
+            <p>Objectives: 1.To develop students knowledge in business through activities. 
+                2. To know the various financial instruments and their knowledge with real time 
+                exposure. 3. To understand the trading mechanism of stock market and encouraging 
+                the students in stock simulations games. 4. To conduct finance events to others 
+                college students.</p><br>
+           
+
+            <h4 style="color: blue;">MY EARTH MY PEOPLE- SOCIAL CLUB</h4>
+            <img src="http://117.239.103.188/media/image/go_green_marathon.jpg"
+            style="height: 200px;width:350px; margin-left: 20px;margin-top:10px;">
+            <p>The main objective of MY EARTH MY PEOPLE- SOCIAL CLUB is to make students 
+                behaviourally refined and morally forthright by imbibing self-discipline, 
+                self- confidence, self- esteem along with etiquette and essential life skills for 
+                the betterment of future life. We are happy to teach them to appreciate diversity 
+                in culture and religious and adapt a harmonious collective living, induct practical 
+                thinking, general awareness and leadership skills that aid them in goal setting for 
+                and life.</p><br>
+            
+
+            <h4 style="color: blue;">SPEAKER'S FORUM</h4>
+            <img src="http://117.239.103.188/media/image/public_speaking_event.jpg"
+            style="height: 200px;width:350px; margin-left: 20px;margin-top:10px;">
+            <p>Communication is the primary means by which we construct social truth, recognize and review 
+                social developments, and effect social revolution. Speaker's forum, The Communication Club at 
+                SKCT SOM is a club for the students interested in communication and an excellent way for them 
+                to connect and network with each other. In this club, students practice their speeches in 
+                frontof their peers and receive constructive feedback on how to improve their speech. The 
+                objective of the club is not only to improve the effectiveness of communication but also to 
+                enhance creativity and productivity of the students by giving them various exercises on writing 
+                and speaking skills. The club serves as a social group to inspire camaraderie among students. 
+                It connects students with professionals in the field of communication, fosters critical thought 
+                on modern communication topics, and assists students with their language skills.</p><br>
+
+            <h4 style="color: blue;">DEMING.COM</h4>
+            <img src="http://117.239.103.188/media/image/induatrial_visit_to_Safe_Express_Logistics.jpg"
+            style="height: 200px;width:350px; margin-left: 20px;margin-top:10px;">
+            <p>William Edwards Deming is widely acknowledged as the leading management thinker in 
+                the field of quality. He was a statistician and business consultant whose methods 
+                helped hasten Japan’s recovery after the Second World War and beyond. He derived 
+                the first philosophy and method that allowed individuals and organizations to plan 
+                and continually improve themselves, their relationships, processes, products and 
+                services. His philosophy is one of cooperation and continual improvement; it avoids 
+                blame and redefines mistakes as opportunities for improvement. And that’s how we 
+                coined our club name as Deming.com It is a platform to nurture and enhance 
+                theoretical foundations and applications in the field of Operations management. 
+                This Deming.com club of SKCT-SOM has been formed with an objective of sharing 
+                knowledge and information in the areas of Systems and Operations. Members are 
+                updated on the latest trends and developments in these fields by regular club 
+                meetings. This club help students to learn about all backgrounds on industry 
+                trends and the growing need for an analytical mindset through tool demonstrations, 
+                guest speakers, networking opportunities and more.</p><br>
+           
+
+            <h4 style="color: blue;">THE LAUNCH PAD</h4>
+            <img src="http://117.239.103.188/media/image/the_launch_pad.jpg"
+            style="height: 200px;width:350px; margin-left: 20px;margin-top:10px;">
+            <p>The Launch pad -Entrepreneurship Club aims to provide a conduit by which students 
+                can access entrepreneurial resources, network with community entrepreneurs, and 
+                share ideas. The club is dedicated to furthering understanding about new and small 
+                businesses.</p><br>
+            </article>
+
+            <article hidden id="placements">
+                <h3 style="margin-left: 10px;font-weight: 900;color: 
+                darkorange; text-align: justify;">PLACEMENT STATISTICS</h3>
+                <hr>
+                <h4 style="color: blue;">OUR RECRUITERS</h4><hr>
+                <div>
+                 <div class="imcon">
+                <img src="http://117.239.103.188/media/image/aditya_birla.jpg">
+                <img src="http://117.239.103.188/media/image/axis_bank.jpg">
+                <img src="http://117.239.103.188/media/image/bosch.jpg">
+                <img src="http://117.239.103.188/media/image/byjus.jpg">
+                <img src="http://117.239.103.188/media/image/catholic_syrian_bank.jpg"></div><br>
+                <div class="imcon">
+                <img src="http://117.239.103.188/media/image/city_union_bank.jpg">
+                <img src="http://117.239.103.188/media/image/coca_cola.jpg">
+                <img src="http://117.239.103.188/media/image/dmart.jpg">
+                <img src="http://117.239.103.188/media/image/federal_bank.jpg">
+                <img src="http://117.239.103.188/media/image/Grand_thornton.jpg"></div><br>
+                <div class="imcon">
+                <img src="http://117.239.103.188/media/image/hdfc.jpg">
+                <img src="http://117.239.103.188/media/image/itc.jpg">
+                <img src="http://117.239.103.188/media/image/johnson.jpg">
+                <img src="http://117.239.103.188/media/image/karvy.jpg">
+                <img src="http://117.239.103.188/media/image/nippon_paint.jpg"></div></div>
+            </article>
+          
+            <article hidden id="testimonials">
+                <h3 style="margin-left: 10px;font-weight: 900;color: 
+                darkorange; text-align: justify;">TESTIMONIALS</h3>
+                <hr>
+                <div style="display: flex; padding: 20px;">
+                    <img src="http://117.239.103.188/media/image/Bhakthi-Picture.jpg" 
+                    style=" width:200px;height:200px;border-radius:50%;">
+                    <div style="margin-left:10px;">
+                      <p>BHAKTHI.H.BHATT</p>
+                      <p>SKCT is a place with a blend of lush green campus and a magnificent 
+                          infrastructure. It provides a platform to students to explore a great 
+                          opportunity to increase their knowledge and skill-set. It has an 
+                          exposure to innovative teaching and practical learning which moulds the 
+                          students in grooming themselves to be a corporate professional. The 
+                          faculties are very friendly, supportive and inspiring. The training and 
+                          placement department supports in bringing in the reputed companies and 
+                          helps the students in getting placed. Overall it’s a complete package of 
+                          learning with fun. I am glad to be a part of SKCT - SOM family.</p><br><hr>
+                    </div>
+                  </div>
+                  <br>
+
+                  <div style="display: flex; padding: 20px;">
+                    <img src="http://117.239.103.188/media/image/IMG-20200129-WA0002_9r8tsMw.jpg" 
+                    style=" width:200px;height:200px;border-radius:50%;">
+                    <div style="margin-left:10px;">
+                      <p>Nazia (2008 – 2010 Batch)</p>
+                      <p>My parents are my educators. Since I was young, they rooted interest in 
+                          education on me, a curiosity towards how learning can improve our 
+                          realities. My years at VLBJCET widened my perspective on how education 
+                          system throughout the world works and how these system needs leadership 
+                          qualities to improve opportunities available in the market. My 
+                          interactions with peers and faculty, both inside and outside the 
+                          classroom allowed me to get a better understanding about the importance 
+                          of Man-agement studies to face the challenges and obstacles in society 
+                          like ours . Our college has always encouraged us on giving equal 
+                          importance to extra curricular ac-tivities and participating in inter- 
+                          college management events. It was this balance that made me appreciate 
+                          and nurture my own skills, while also breaking new grounds and new ideas.
+                           VLBJCET had always been a hub of learning for it's students</p><br><hr>
+                    </div>
+                  </div>
+                  <br>
+
+                  <div style="display: flex; padding: 20px;">
+                    <img src="http://117.239.103.188/media/image/vidhya.jpg" 
+                    style=" width:200px;height:200px;border-radius:50%;">
+                    <div style="margin-left:10px;">
+                      <p>Vidhya Sankari.M, Senior Education Counsellor, Byju’s MBA 
+                          (Batch 2018-2020)</p>
+                      <p>I Feel proud that I was one of the student of SKCT where i have completed 
+                          my MBA 2018-2020.The department has made me feel special in each and 
+                          every aspects of two years and also taught me both the professionalism 
+                          and culture to be followed throughout my life. SKCT filled with 
+                          blessings of nature which paved me the platform to learn and enhance my 
+                          skills in the professional life. Throughout my MBA the most respected 
+                          faculties played a vital role in all my academic participations as well 
+                          as my extracurricular and my special thanks to all the faculty members 
+                          as the supporting pillars of each and every academic as well as personal 
+                          well wishers forever. SKCT simply awesome to spread the positive vibes to 
+                          find the potential in myself and prove that in all walks of my 
+                          life.</p><br><hr>
+                    </div>
+                  </div>
+                  <br>
+
+                  <div style="display: flex; padding: 20px;">
+                    <img src="http://117.239.103.188/media/image/divya.jpg" 
+                    style=" width:200px;height:200px;border-radius:50%;">
+                    <div style="margin-left:10px;">
+                      <p>Dhivya A, Department Manager Trainee, DMart. MBA (2018-2020)</p>
+                      <p>I feel very proud to be a part of SKCT SOM family where I completed my 
+                          MBA during the academic year 2018-2020.Its my pleasure to thank all my 
+                          beloved professors who had been a great support system for us by molding 
+                          us with good managerial skills. Apart from academics, various 
+                          extracurricular activities and events were conducted which helped us to 
+                          get exposure and enhance our professional skills. SKCT has been blessed 
+                          with wonderful nature and friendly atmosphere with full of optimistic 
+                          vibes. Each and every professor is unique and taught us professionalism 
+                          and corporate culture in every aspect throughout our MBA journey. They 
+                          equipped us with great managerial skills which helped us during 
+                          placements. SKCT helped me to find my inner potential and also the right 
+                          path in which I wanted to be.</p><br><hr>
+                    </div>
+                  </div>
+                  <br>
+
+                  <div style="display: flex; padding: 20px;">
+                    <img src="http://117.239.103.188/media/image/dinesh.jpg" 
+                    style=" width:200px;height:200px;border-radius:50%;">
+                    <div style="margin-left:10px;">
+                      <p>Dinesh S (2019 – 2021) BD – Bajaj Finserv Health limited.</p>
+                      <p>It was my immense luck and fortune to be the part of Sri Krishna college 
+                          of technology where I can grow. The entire faculty and department leaves 
+                          no stone unturned to shape one's future. My two years at skct have been 
+                          a wonderful experience of learning with prolific exposure to outside. 
+                          Huge respect, love and devotion for entire faculty members and department. 
+                          It's their efforts that make me to count myself into better 
+                          professionals.</p><br><hr>
+                    </div>
+                  </div>
+                  <br>
+
+                  <div style="display: flex; padding: 20px;">
+                    <img src="http://117.239.103.188/media/image/neelesh.jpg" 
+                    style=" width:200px;height:200px;border-radius:50%;">
+                    <div style="margin-left:10px;">
+                      <p>Neelesh C S, (2019-2021), Management intern , Vita Food Ltd.</p>
+                      <p>My college has paved a way for my interpersonal growth by providing me 
+                          opportunities when and wherever possible. They have always given me 
+                          guidance and support, they have encouraged me to participate in various 
+                          events which helped me in acquiring the skills required for future of 
+                          being a business person, and I believe they should continue to motivate 
+                          students that gaining knowledge from outside world is more efficient and 
+                          helpful.</p><br><hr>
+                    </div>
+                  </div>
+                  <br>
+
+                  <div style="display: flex; padding: 20px;">
+                    <img src="http://117.239.103.188/media/image/preetha.jpg" 
+                    style=" width:200px;height:200px;border-radius:50%;">
+                    <div style="margin-left:10px;">
+                      <p>Preetha S, (Batch 2019-21), Talent Acquisition Intern, Kovai.co</p>
+                      <p>The MBA course at SKCT is designed and executed in such a manner that it 
+                          transforms the all-round skills of students. It enriches each student 
+                          personally and professionally. The institution promotes not just the 
+                          academics and marks but also the extra-curriculars. The course is not 
+                          just about the classroom learning. Faculties encourage the students to 
+                          explore and do not confine them into a restricted boundary. The journey 
+                          was full of adventure. However, I could sail through because of the 
+                          supportive peers and faculties.</p><br><hr>
+                    </div>
+                  </div>
+                  <br>
+
+                  <div style="display: flex; padding: 20px;">
+                    <img src="http://117.239.103.188/media/image/dhanuskodi.jpg" 
+                    style=" width:200px;height:200px;border-radius:50%;">
+                    <div style="margin-left:10px;">
+                      <p>Dhanuskodi.M, (Batch 2018-2020), Relationship Manager, Home First Finance 
+                          Corporation./p>
+                      <p>I am extremely proud and honored that I was one of the students in SKCT, 
+                          where I have completed my MBA 2018- 2020. College life is meant to bring 
+                          personality development, intellectual skills, good communication skills 
+                          and more ethics. The experience was irreplaceable in each and every 
+                          aspects of two years. SKCT works on development of student personality, 
+                          my college improve my skills not only by theoretically but also 
+                          practically. My faculties are played important role in all my academic 
+                          participations as well as my extracurricular throughout my MBA. Thanks 
+                          to all the faculty members as the supporting pillars of each and every 
+                          academic as well as personal well-wishers forever. SKCT simply awesome 
+                          to spread the positive vibes to find the potential in myself and prove 
+                          that in all walks of my life.</p><br><hr>
+                    </div>
+                  </div>
+                  <br>
+            </article>
+
+            <article hidden id="gallery">
+                <h3 style="margin-left: 10px;font-weight: 900;color: 
+                darkorange; text-align: justify;">GALLERY</h3>
+                <hr>
+                <div>
+                    <div class="imcon">
+                        <img src="http://117.239.103.188/media/image/association_inaguration.jpg">
+                        <img src="http://117.239.103.188/media/image/Innovation_day.jpg">
+                        <img src="http://117.239.103.188/media/image/association_inaguration_JVLIGVA.jpg">
+                        <img src="http://117.239.103.188/media/image/Indian_Constitution_day.jpg">
+                        <img src="	http://117.239.103.188/media/image/pannel_discussion.jpg">
+                    </div><br>
+
+                    <div class="imcon">
+                        <img src="	http://117.239.103.188/media/image/Poster_Presentation.jpg">
+                        <img src="http://117.239.103.188/media/image/gram_sabha.jpg">
+                        <img src="http://117.239.103.188/media/image/tamilnadu_day.jpg">
+                        <img src="http://117.239.103.188/media/image/mock_paliament.png">
+                        <img src="http://117.239.103.188/media/image/childrens_day_2019.png">
+                    </div><br>
+
+                    <div class="imcon">
+                        <img src="http://117.239.103.188/media/image/comodity_talk.png">
+                        <img src="http://117.239.103.188/media/image/aicte_fdp1.png">
+                        <img src="http://117.239.103.188/media/image/aicte_fdp2.png">
+                        <img src="http://117.239.103.188/media/image/aicte_fdp3.png">
+                        <img src="http://117.239.103.188/media/image/5s_worskhop.jpg">
+                    </div><br>
+
+                    <div class="imcon">
+                        <img src="http://117.239.103.188/media/image/Pongal_celebration.jpg">
+                        <img src="http://117.239.103.188/media/image/wealth_from_waste.jpg">
+                        <img src="http://117.239.103.188/media/image/simulation.jpg">
+                        <img src="http://117.239.103.188/media/image/alumnimeet.jpg">
+                        <img src="	http://117.239.103.188/media/image/ananta.jpg">
+                    </div><br>
+
+                    <div class="imcon">
+                        <img src="http://117.239.103.188/media/image/vibrant_department.jpg">
+                        <img src="	http://117.239.103.188/media/image/best_faculty_2020.jpg">
+                        <img src="	http://117.239.103.188/media/image/outbound2.jpg">
+                        <img src="http://117.239.103.188/media/image/outbound3.jpg">
+                        <img src="	http://117.239.103.188/media/image/outbound4.jpg">
+                    </div><br>
+
+                    <div class="imcon">
+                        <img src="	http://117.239.103.188/media/image/outbound1.jpg">
+                        <img src="http://117.239.103.188/media/image/womens_day1.jpg">
+                        <img src="http://117.239.103.188/media/image/womensday2.jpg">
+                        <img src="	http://117.239.103.188/media/image/consumer_awareness_day.jpg">
+                        <img src="	http://117.239.103.188/media/image/webinar1.jpg">
+                    </div><br>
+
+                    <div class="imcon">
+                        <img src="http://117.239.103.188/media/image/webinar2.jpg">
+                        <img src="http://117.239.103.188/media/image/WhatsApp_Image_2022-03-14_at_5.31.16_PM.jpeg">
+                        <img src="http://117.239.103.188/media/image/WhatsApp_Image_2022-03-14_at_5.29.41_PM.jpeg">
+                    </div><br>
+                </div>
+    </main>
+
+    <script src="mba.js"></script>
+    <script type="text/javascript">
+        const slider = document.querySelector(".slider");
+        const nextBtn = document.querySelector(".next-btn");
+        const prevBtn = document.querySelector(".prev-btn");
+        const slides = document.querySelectorAll(".slide");
+        const slideIcons = document.querySelectorAll(".slide-icon");
+        const numberOfSlides = slides.length;
+        var slideNumber = 0;
+
+        //image slider next button
+        nextBtn.addEventListener("click", () => {
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+            slideIcons.forEach((slideIcon) => {
+                slideIcon.classList.remove("active");
+            });
+
+            slideNumber++;
+
+            if (slideNumber > (numberOfSlides - 1)) {
+                slideNumber = 0;
+            }
+
+            slides[slideNumber].classList.add("active");
+            slideIcons[slideNumber].classList.add("active");
+        });
+
+        //image slider previous button
+        prevBtn.addEventListener("click", () => {
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+            slideIcons.forEach((slideIcon) => {
+                slideIcon.classList.remove("active");
+            });
+
+            slideNumber--;
+
+            if (slideNumber < 0) {
+                slideNumber = numberOfSlides - 1;
+            }
+
+            slides[slideNumber].classList.add("active");
+            slideIcons[slideNumber].classList.add("active");
+        });
+
+        //image slider autoplay
+        var playSlider;
+
+        var repeater = () => {
+            playSlider = setInterval(function () {
+                slides.forEach((slide) => {
+                    slide.classList.remove("active");
+                });
+                slideIcons.forEach((slideIcon) => {
+                    slideIcon.classList.remove("active");
+                });
+
+                slideNumber++;
+
+                if (slideNumber > (numberOfSlides - 1)) {
+                    slideNumber = 0;
+                }
+
+                slides[slideNumber].classList.add("active");
+                slideIcons[slideNumber].classList.add("active");
+            }, 4000);
+        }
+        repeater();
+
+        //stop the image slider autoplay on mouseover
+        slider.addEventListener("mouseover", () => {
+            clearInterval(playSlider);
+        });
+
+        //start the image slider autoplay again on mouseout
+        slider.addEventListener("mouseout", () => {
+            repeater();
+        });
+    </script>
+
+</body>
+
+</html>

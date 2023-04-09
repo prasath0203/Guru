@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  scroll-behavior: smooth;
+}
+
+h2{
+  padding-bottom: 10px;
+  font-size:35px;
+  font-weight: 600;
+  color:rgb(247, 91, 0);
+  text-align: center;
+  
+}
+
+h3{
+  padding: 10px;
+  font-size:25px;
+  font-weight: 600;
+  color:rgb(247, 91, 0);
+  text-align: center;
+  margin: 15px 10px;
+  
+
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins';
+}
+body menu {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+}
+body menu ul {
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: fixed;
+  width: 300px;
+  height: 100vh;
+  background: #eee;
+  border-right: 2px solid #000;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+body menu ul li {
+  transition: 0.3s;
+  padding: 0rem;
+  margin: 20px auto;
+  padding: 10px 20px;
+}
+
+body menu ul li i{
+  margin-right: 10px;
+  font-size:18px;
+}
+
+body menu ul li:hover i{
+  color: blue;
+}
+
+body menu ul li:hover {
+  
+ 
+  border-left: 5px solid blue;
+  border-right:5px solid blue;
+}
+
+body menu ul li a {
+  color: #222;
+    white-space: nowrap;
+  text-decoration: none;
+  font-size:15px;
+  font-weight: 600;
+}
+body main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-left: 300px;
+  padding: 0.5rem;
+}
+body main section {
+  padding: 1rem;
+  background: rgb(255, 255, 255);
+  line-height: 28px;
+ 
+  
+}
+body main section h1 {
+  text-align: center;
+}
+
+@media (max-width:850px) {
+
+  body menu{
+    display: none;
+  }
+
+  body main{
+    margin-left: 0px;
+  }
+}

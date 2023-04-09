@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="style.css">
+
+
+  <title>sidebar</title>
+  <style>
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: justify;
+    }
+
+    .table thead {
+      background-color: lightslategray;
+
+    }
+
+    .table thead tr th {
+      font-size: 17px;
+      font-weight: bold;
+      opacity: 1;
+      background-color: darkblue;
+      color: white;
+      letter-spacing: 0.2em;
+      vertical-align: top;
+      padding: 10px;
+      border: 1px solid black;
+
+    }
+
+    .table tbody tr td {
+      font-size: 15px;
+      font-weight: 500px;
+      opacity: 1;
+      letter-spacing: 0.1em;
+      vertical-align: top;
+      padding: 10px;
+      border: 1px solid black;
+      text-align: justify;
+
+
+    }
+    .container{
+      width: 330px;
+      
+      
+    }
+
+    .flex {
+      display: flex;
+      margin-top: 20px;
+      padding: 10px;
+    }
+
+    .button {
+      text-align: center;
+    }
+    .imggrid{
+      margin-bottom: 10px;
+    }
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(330px,1fr));
+      gap: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <button id='navButton'>
+    <div hidden class="close-btn">X
+
+    </div>
+    <div class="hamburger-menu">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+  </button>
+  <nav>
+    <div id="roadmap-container">
+      <a href="#" class='menu-item'>DEPARTMENT OF ICE</a>
+
+    </div>
+    <div class="menu-link ic">
+      <i class="material-icons">home</i>
+
+      <a href="#roadmap-article" class="menu-item"
+        style="margin-left: 6px;font-size: 1.1rem;color: rgb(36, 36, 36);">Home</a>
+
+    </div>
+    <div class="menu-link ic">
+      <i class="material-icons">local_activity</i>
+      <button data-list="1" class="menu-dropdown-item" style="font-family: 'poppins';">Programmes
+        <i id="sublist-1-arrow" class="material-icons">arrow_drop_down</i>
+
+      </button>
+      <ul id="sublist-1" hidden>
+        <li><a href="#sec1-a" class=" menu-item">B.E</a></li>
+      </ul>
+    </div>
+
+    <div class="menu-link ic">
+      <i class="material-icons">calendar_today</i>
+
+      <a href="#academiccalender" class="menu-item"
+        style="margin-left: 6px;font-size: 1.1rem;color: rgb(36, 36, 36);">Academic Calendar</a>
+
+    </div>
+    <div class="menu-link ic">
+      <i class="material-icons">dynamic_feed</i>
+      <button data-list="2" class="menu-dropdown-item" style="font-family: 'poppins';">Facilities
+        <i id="sublist-2-arrow" class="material-icons">arrow_drop_down</i>
+
+      </button>
+      <ul id="sublist-2" hidden>
+        <li><a href="#lab" class=" menu-item">Lab</a></li>
+        <li><a href="#library" class=" menu-item">Library</a></li>
+      </ul>
+    </div>
+    <div class="menu-link ic">
+      <i class="material-icons">build</i>
+      <button data-list="3" class="menu-dropdown-item" style="font-family: 'poppins';">Research
+        <i id="sublist-3-arrow" class="material-icons">arrow_drop_down</i>
+
+      </button>
+      <ul id="sublist-3" hidden>
+        <li><a href="#research1" class=" menu-item">MOUs</a></li>
+        <li><a href="#research2" class=" menu-item">Ph.D completed & Registered</a></li>
+        <li><a href="#research3" class=" menu-item">Patents</a></li>
+        <li><a href="#research4" class=" menu-item">Journal Publications</a></li>
+        <li><a href="#research5" class=" menu-item">Citation Statistics</a></li>
+        <li><a href="#research6" class=" menu-item">Books/Books Chapter Published</a></li>
+        <li><a href="#research7" class=" menu-item">SIG-Faculty</a></li>
+
+      </ul>
+    </div>
+    <div class="menu-link ic">
+      <i class="material-icons">people</i>
+      <button data-list="4" class="menu-dropdown-item" style="font-family: 'poppins';">People
+        <i id="sublist-4-arrow" class="material-icons">arrow_drop_down</i>
+
+      </button>
+      <ul id="sublist-4" hidden>
+        <li><a href="#roadmap-article" class=" menu-item">Faculty</a></li>
+        <li><a href="#roadmap-article" class=" menu-item">Supporting Staff</a></li>
+      </ul>
+    </div>
+    <div class="menu-link ic">
+      <i class="material-icons">wb_incandescent</i>
+      <button data-list="5" class="menu-dropdown-item" style="font-family: 'poppins';">Activities
+        <i id="sublist-5-arrow" class="material-icons">arrow_drop_down</i>
+
+      </button>
+      <ul id="sublist-5" hidden>
+        <li><a href="#events" class=" menu-item">Events</a></li>
+        <li><a href="http://117.239.103.188/media/ICE_student_achievement_co-curricular_2018-19.pdf"
+            class=" menu-item">Co-Curricular</a></li>
+        <li><a href="http://117.239.103.188/media/ICE_sports_2018-19.pdf" class=" menu-item">Sports</a></li>
+
+      </ul>
+    </div>
+    <div class="menu-link ic">
+      <i class="material-icons">emoji_events</i>
+      <button data-list="6" class="menu-dropdown-item" style="font-family: 'poppins';">Achievements
+        <i id="sublist-6-arrow" class="material-icons">arrow_drop_down</i>
+
+      </button>
+      <ul id="sublist-6" hidden>
+        <li><a href="#placements" class=" menu-item">Placements</a></li>
+        <li><a href="#students" class=" menu-item">Best Outgoing Students</a></li>
+      </ul>
+    </div>
+    
+    <div class="menu-link ic">
+      <i class="material-icons">local_library</i>
+
+      <a href="#roadmap-article" class="menu-item"
+        style="margin-left: 6px;font-size: 1.1rem;color: rgb(36, 36, 36);">Higher Studies</a>
+
+    </div>
+  
+    <div class="menu-link ic">
+      <i class="material-icons">photo</i>
+
+      <a href="#testimonials" class="menu-item"
+        style="margin-left: 6px;font-size: 1.1rem;color: rgb(36, 36, 36);">Testimonials</a>
+
+    </div>
+    <div class="menu-link ic">
+      <i class="material-icons">photo</i>
+
+      <a href="#gallery" class="menu-item"
+        style="margin-left: 6px;font-size: 1.1rem;color: rgb(36, 36, 36);">Gallery</a>
+
+    </div>
+
+  </nav>
+  <main>
+
+    <article id="roadmap-article" class="active-article">
+      <div class="slider">
+        <div class="slide active">
+          <img src="http://117.239.103.188/media/image/IMG_7175.JPG">
+          <!-- <div class="info">
+                    <h2>Title</h2>
+                    <p>Description here</p>
+                  </div> -->
+        </div>
+        <div class="slide">
+          <img src="http://117.239.103.188/media/image/IMG_7175.JPG" alt="">
+          <!-- <div class="info">
+                    <h2>Title</h2>
+                    <p>Description here</p>
+                  </div> -->
+        </div>
+        <div class="slide">
+          <img src="http://117.239.103.188/media/image/IMG_7175.JPG" alt="">
+          <!-- <div class="info">
+                    <h2>Title</h2>
+                    <p>Description here</p>
+                  </div> -->
+        </div>
+        <div class="slide">
+          <img src="http://117.239.103.188/media/image/IMG_7175.JPG" alt="">
+          <!-- <div class="info">
+                    <h2>Title</h2>
+                    <p>Description here</p>
+                  </div> -->
+        </div>
+        <div class="slide">
+          <img src="http://117.239.103.188/media/image/IMG_7175.JPG" alt="">
+          <!-- <div class="info">
+                    <h2>Titl</h2>
+                    <p>Description here</p>
+                  </div> -->
+        </div>
+        <div class="navigation">
+          <i class="fas fa-chevron-left prev-btn"></i>
+          <i class="fas fa-chevron-right next-btn"></i>
+        </div>
+
+      </div>
+
+      <div class="det">
+        <div class="depname">
+          <h3 style="margin-left: 10px;color: darkblue;">DEPARTMENT OF INSTRUMENTATION & CONTROL ENGINEERING</h3>
+          <p style="margin: 0px;font-size: .679em;font-weight: 900;">NBA ACCREDITED
+            <hr>
+        </div>
+        <div class="depdet">
+          <div class="contp">
+            <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">ABOUT DEPARTMENT</h3>
+            <p>The Department of Instrumentation and Control Engineering was started in the year 2010 with an intake of
+              60 students.
+              Right from its start, the department aims to impart excellent technical know-how and a high competency
+              level to all the
+              students. With an efficient team of faculty, the department educates and grooms engineers to meet the
+              international
+              standards of process industries. The Department graduates are Innovative, Effective Communicators, Good
+              Team players with
+              managerial skills, high ethical standards and a strong sense of professionalism.</p>
+          </div>
+          <div class="contp">
+            <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">VISION</h3>
+            <p>To become a world-class school and center for excellence in Instrumentation and Control Engineering for
+              higher-level
+              learning, research, and consultancy.</p>
+          </div>
+          <div class="contp">
+            <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">MISSION</h3>
+            <ul>
+              <li>
+                <p> 1.IMPART high-quality education that comprehends student aspiration and potential.</p>
+              </li>
+              <li>
+                <p> 2.CREATE a passion for learning and foster innovation.</p>
+              </li>
+              <li>
+                <p> 3.ENDORSE and nurture the talents towards serving society..</p>
+              </li>
+            </ul>
+          </div>
+          <div class="contp">
+            <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">HOD's DESK</h3>
+            <div class="imf" style="display: flex;">
+              <div class="imgc"><img src="http://117.239.103.188/media/image/DSC_0432.JPG"
+                  style="width:290px; height: 160px;">
+              </div>
+            </div>
+          </div>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            The department was started in the year 2011, with an intake of 60 students. Right from its start, the
+            department
+            has succeeded to impart technical knowledge and high competency level to all the students. The students are
+            exposed
+            profoundly to the diverse fields like Industrial Instrumentation, Process Control System Designs, PLCs, DCS,
+            Industrial Drives, Virtual Instrumentation and Embedded Systems. The Department student learns subjects
+            across
+            departmental boundaries and excels in extra-curricular activities. The students are trained by renowned
+            personality
+            development trainers, leading HR professionals and Industrialists, enabling them to take up globally
+            challenging
+            jobs in leading industries. The department has earned fame not only for its excellent academic and
+            extra-curricular
+            activities, but also for its research and industry connect initiatives. This department by the virtue of
+            excellent
+            infrastructural facilities, committed faculty members & enthusiastic student community is earning continuous
+            reputation with many laurels to its credit.
+          </p>
+        </div>
+
+      </div>
+      <div class="contp">
+        <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">PROGRAM EDUCTIONAL OBJECTIVES</h3>
+        <ul>
+          <li>
+            <p> PEO1. To provide a sound foundation in the mathematical, scientific & engineering fundamentals to
+              formulate,
+              solve and analyze problems related to Instrumentation and Control Engineering..</p>
+          </li>
+          <li>
+            <p> PEO2. To prepare graduates for employment in core / IT industries who are socially responsible and
+              integrated
+              with professional and ethical skills.</p>
+          </li>
+          <li>
+            <p>PEO3. To prepare graduates to involve in research, higher studies and/or to become entrepreneurs in the
+              long run.</p>
+          </li>
+        </ul>
+
+      </div>
+      <div class="contp">
+        <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">PROGRAM OUTCOMES</h3>
+        <p>PO1.Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an
+          engineering
+          specialization to the solution of complex engineering problems.</p>
+        <p>PO2.Problem analysis: Identity, formulate, review research literature, and analyze complex engineering
+          problems
+          reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering
+          sciences.</p>
+        <p>PO3.Design/development of solutions: Design solutions for complex engineering problems and design system
+          components
+          or processes that meet the specified needs with appropriate consideration for the public health and safety,
+          and the
+          cultural, societal, and environmental considerations.</p>
+        <p>PO4. Conduct investigations of complex problems: Use research-based knowledge and research methods including
+          design
+          of experiments, analysis, and interpretation of data, and synthesis of the information to provide valid
+          conclusions.</p>
+        <p>PO5.Modern tool usage: Create, select, and apply appropriate techniques, resources, and modern engineering
+          and IT
+          tools including prediction and modeling to complex engineering activities with an understanding of the
+          limitations.</p>
+        <p>
+          PO6. The engineer and society: Apply reasoning informed by the contextual knowledge to assess societal,
+          health,
+          safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering
+          practice.</p>
+        <p>
+          PO7. Environment and sustainability: Understand the impact of the professional engineering solutions in
+          societal and
+          environmental contexts, and demonstrate the knowledge of, and need for sustainable development.
+        </p>
+        <p>
+          PO8. Ethics: Apply ethical principles and commit to professional ethics and responsibilities and norms of the
+          engineering practice.</p>
+        <p>
+          PO9. Individual and team work: Function effectively as an individual, and as a member or leader in diverse
+          teams,
+          and in multidisciplinary settings.</p>
+        <p>
+          PO10. Communication: Communicate effectively on complex engineering activities with the engineering community
+          and with society at large, such as, being able to comprehend and write effective reports and design
+          documentation,
+          make effective presentations, and give and receive clear instructions.
+        </p>
+        <p>
+          PO11. Project management and finance: Demonstrate knowledge and understanding of the engineering and
+          management
+          principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in
+          multidisciplinary environments.
+        </p>
+        <p>
+          PO12. Life-long learning: Recognize the need for, and have the preparation and ability to engage in
+          independent and
+          life-long learning in the broadest context of technological change.
+        </p>
+
+
+
+      </div>
+      <div class="contp">
+        <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">PROGRAM SPECIFIC OUTCOMES</h3>
+        <p>
+          PSO1: An understanding of electrical and electronics devices/instruments to design circuits and solve
+          real-time
+          problems.</p>
+        <p>
+          PSO2: An ability to provide innovative control methodologies to core industrial problems</p>
+      </div>
+      </div>
+      </div>
+    </article>
+    <article hidden id="sec1-a">
+      <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">B.E. PROGRAM</h3>
+      <hr>
+      <p> 2011-2012</p>
+      <p>INSTRUMENTATION & CONTROL ENGINEERING - 60</p>
+      <p>The department started with an intake of 60 students in the year 2011.</p>
+    </article>
+
+
+    <article hidden id="academiccalender">
+      <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">ACADEMIC CALENDER</h3>
+      <hr>
+      <ul>
+        <li><a href="http://117.239.103.188/media/VER_2____19.11.19__Jan_WD_SENIOR_KZIV46s.pdf">
+            <i class="fas fa-cloud-download" style="color:deepskyblue;font-size:15px;margin-right: 10px;">
+            </i>ACADEMIC CALENDER - 2019-20</a></li>
+      </ul>
+    </article>
+
+    <article hidden id="lab">
+      <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">LABORATORY</h3>
+      <hr>
+      <h4 style="color: blue;">PROCESS CONTROL LABORATORY</h4>
+      <img src="http://117.239.103.188/media/image/41.png" style="height: 160px; 
+            width: 250px; padding: 15px;">
+      <img src="http://117.239.103.188/media/image/IMG_7436.JPG" style="height: 160px; 
+            width: 250px; padding: 15px;">
+      <img src="http://117.239.103.188/media/image/IMG_7433.JPG" style="height: 160px; 
+            width: 250px; padding: 15px;">
+      <p>The objective of Process Control Laboratory is to design and implementation of controllers for different
+        processes.
+        Various automation and computer-aided processes are used for controlling the system safely and efficiently. The
+        lab gives
+        an overview of the design and working of different equipment used in the Process Control Industry. It is well
+        established
+        with Servo Motor Position Control System, Stepper Motor Speed Control System, Flow Process Station, and Level
+        Process
+        Station & Temperature Control Process Station. Also, the lab consists of 10 systems.</p>
+      <p>Faculty In-charge:Mr.Ajith.B.Singh</p>
+      <br>
+
+      <h4 style="color: blue;">INDUSTRIAL AUTOMATION LABORATORY</h4>
+      <img src="http://117.239.103.188/media/image/5_Fa870gL.jpg" style="height: 160px; 
+                width: 250px; padding: 15px;">
+      <img src="http://117.239.103.188/media/image/IMG_20200122_100242.jpg" style="height: 160px; 
+              width: 250px; padding: 15px;">
+      <img src="http://117.239.103.188/media/image/IMG_20200122_101157.jpg" style="height: 160px; 
+              width: 250px; padding: 15px;">
+      <p style="font-weight: bold; font-size:18px;">Objective:</p>
+      <p>To enable the students to get a rewarding IT career.</p>
+      <p>To give VMware certifications that continue to be in high demand as companies virtualize
+        their IT infrastructures and move to the cloud.</p>
+      <p>In Industrial Automation Laboratory students are given in-depth training in the industry using MATLAB. The lab
+        has
+        sophisticated equipment like Process Simulation system for Bottle filling using PLC, Computerized Liquid level
+        system &
+        Distributed Control System of high quality. This laboratory is to provide the computational facilities to the
+        students
+        and provides different prototype models based on MATLAB and Lab VIEW. MATLAB provides a platform for simulating
+        various
+        applications in the continuous and discrete domain. Application-oriented experiments based on control system are
+        done
+        using SIMULINK. Real-time experiments are performed using Programmable Logic Controller (PLC). The lab consists
+        of 18
+        systems.</p>
+      <p>Lab Incharges: Ms.K.Shanthi, Mr.K.Saravanakumar</p>
+      <br>
+
+      <h4 style="color: blue;">INDUSTRIAL INSTRUMENTATION LABORATORY</h4>
+      <img src="http://117.239.103.188/media/image/22.png" style="height: 160px; 
+                  width: 290px; padding: 15px;">
+      <img src="http://117.239.103.188/media/image/IMG_20200122_104834.jpg" style="height: 160px; 
+                  width: 290px; padding: 15px;">
+      <p>Lab Incharges: Dr.T.Chinnadurai, Mr.J.DhanaselvamThe purpose of this lab is to give exposure to sensors and its
+        measurement. It is used to study how physical quantities are measured and how they are converted to electrical
+        or
+        other forms. It also imparts adequate knowledge and provides hands-on experience to handle equipment in
+        industries.
+        The lab is equipped with Deadweight pressure gauge tester, Rotational and Redwood viscometers, Strain gauge, IC
+        temperature sensor, RTD, Thermistor. Optical Pyrometer, Control valve etc.</p>
+      <p>Lab Incharges: Dr.T.Chinnadurai, Mr.J.Dhanaselvam</p>
+      <br>
+
+      <h4 style="color: blue;">TRANSDUCERS & MEASUREMENTS LABORATORY</h4>
+      <img src="http://117.239.103.188/media/image/12.png" style="height: 160px; 
+                    width: 290px; padding: 15px;">
+      <p>The core objective of this lab is to study the sensor characteristics and design of signal conditioning
+        circuits.
+        The lab also helps to explore the usage and applications of transducers for measuring temperature, force,
+        displacement, sound and light. Transducers are also used for real-time measurement of volumetric capacity and
+        Image
+        Fusion. It helps to understand the circuit designing and debugging of analog control systems using sensors,
+        amplification, filtering, controller circuits, power amplifiers, and actuators. The laboratory is well equipped
+        with strain gauges, load cell trainer, linear displacement transducer, LVDT trainer, Thermistor trainer, and
+        Thermocouple and RTD trainer.</p>>
+      <p>Lab Incharge: Dr.S.Narendiran</p>
+      <br>
+
+      <h4 style="color: blue;">PRODUCT DEVELOPMENT CENTER - ICE</h4>
+      <img src="http://117.239.103.188/media/image/pjt.JPG" style="height: 160px; 
+                    width: 250px; padding: 15px;">
+      <img src="http://117.239.103.188/media/image/IMG_7326.JPG" style="height: 160px; 
+                     width: 250px; padding: 15px;">
+      <img src="http://117.239.103.188/media/image/IMG_20200122_102814.jpg" style="height: 160px; 
+                     width: 250px; padding: 15px;">
+      <p>An exclusive centre with facilities for students to develop prototypes of industrial solutions and products is
+        available in the department. The centre has helped in creating an ambience of innovation within the student
+        community of the Department. Ten prototypes have been developed by students with faculty mentors and five
+        patents
+        have been filed as an outcome from this centre..</p>
+      <p>Lab Incharge: Dr.M.Karthigaipandian</p>
+      <br>
+
+      <h4 style="color: blue;">BIOMEDICAL INSTRUMENTATION LABORATORY</h4>
+      <img src="http://117.239.103.188/media/image/IMG_20200122_112836.jpg" style="height: 160px; 
+                    width: 290px; padding: 15px;">
+      <img src="http://117.239.103.188/media/image/IMG_20200122_113412.jpg" style="height: 160px; 
+                    width: 290px; padding: 15px;">
+      <p>The core objective of this lab is to study the characteristics and design of various instruments used in the
+        biomedical field. The lab also helps to explore the usage and applications of instruments for measuring
+        temperature,
+        pressure, ECG, etc. It helps to understand the basics in designing and debugging of analogue instruments using
+        sensors, amplification, filtering, controller circuits, power amplifiers, and actuators in the biomedical field.
+        The laboratory is sponsored by TMI systems, Bangalore and well equipped with biomedical instruments.</p>
+      <p>Lab Incharge: Mr.S.Dilipkumar, Mr.R.Rajesh</p>
+      <br>
+
+      <h4 style="color: blue;">VIRTUAL INSTRUMENTATION LABORATORY</h4>
+      <img src="http://117.239.103.188/media/image/31.png" style="height: 160px; 
+                    width: 250px; padding: 15px;">
+      <img src="http://117.239.103.188/media/image/IMG_7372.JPG" style="height: 160px; 
+                    width: 250px; padding: 15px;">
+      <img src="http://117.239.103.188/media/image/IMG_7283.JPG" style="height: 160px; 
+                    width: 250px; padding: 15px;">
+      <p>CONFIGURATION:Lenovo M72e, Intel Core i3 3 rd Gen 3.3 GHz, H61 Chipset, 4 GB DDR3 RAM, 500 GB SATA2 HDD, 18.5”
+        TFT
+        Wide Screen Monitor, USB Keyboard and Mouse</p>
+      <p>Lab In-Charge: Mr. Kalyan</p>
+      <p>Faculty In-charge : Dr. S. Siamala Devi</p>
+      <br>
+    </article>
+
+    <article hidden id="library">
+      <img src="http://117.239.103.188/media/IMG_97312.jpg" style="height:500px;margin-top:15px;"></div>"
+      <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">DEPARTMENT LIBRARY</h3>
+      <hr>
+      <P>The department houses a library with collections of technical, non-technical books, magazines and journals.
+        The students and faculty have access to these collections, helping them improve the professional and personal
+        skills.</P>
+    </article>
+
+    <article hidden id="research1">
+      <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">ICE - MOUS</h3>
+      <hr>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Industry</th>
+            <th>Date</th>
+            <th>Outcome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Best Engineers Pumps private ltd</td>
+            <td>16.04.2018</td>
+            <td>Internships, Academic Support, In plant training & student projects</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>Bairavi Pet Bottle Industries</td>
+            <td>10.04.2018</td>
+            <td>Consultancy work & student projects</td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td>Green India - NGO</td>
+            <td>28.03.2018</td>
+            <td>Social Activity support</td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td>Caliber Embedded Technologies India Pvt Ltd., Coimbatore.</td>
+            <td>24.07.2017</td>
+            <td> Internships & Academic Support</td>
+          </tr>
+
+          <tr>
+            <td>5</td>
+            <td>TMI Systems, Bangalore.</td>
+            <td>25.05.2016</td>
+            <td>Internships, Training's, Academic Support and Laboratory sponsor</td>
+          </tr>
+
+          <tr>
+            <td>6</td>
+            <td>MECH CI CADD Engineering Pvt Ltd., Chennai.</td>
+            <td>29.03.2016</td>
+            <td>Internships, Training & Academic Support</td>
+          </tr>
+
+          <tr>
+            <td>7</td>
+            <td>IPCS Automation, Coimbatore.</td>
+            <td>15.02.2016</td>
+            <td>Internships, Training's, Laboratory sponsor & Placements</td>
+          </tr>
+
+          <tr>
+            <td>8</td>
+            <td>Yokogawa India Ltd., Bangalore</td>
+            <td>09.09.2014</td>
+            <td>Internships & Placements</td>
+          </tr>
+        </tbody>
+
+      </table>
+    </article>
+
+    <article hidden id="research2">
+      <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">ICE - Ph.D COMPLETED & REGISTERED</h3>
+      <hr>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Scholar Name</th>
+            <th>Area of specialization</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Ms.K.Shanthi</td>
+            <td>Process Control & Automation</td>
+            <td>Confirmation received & Pursuing</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>Mr.S.Dilipkumar</td>
+            <td>Nanotechnology</td>
+            <td>Confirmation received & Pursuing</td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td>Mr.J.Dhanaselvam</td>
+            <td>Renewable energy Management</td>
+            <td>Confirmation received & Pursuing</td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td>Mr.Ajith.B.Singh</td>
+            <td>Process Control & Industrial Instrumentation</td>
+            <td>Confirmation received & Pursuing</td>
+          </tr>
+
+          <tr>
+            <td>5</td>
+            <td>Dr.P.Manju</td>
+            <td>Power Systems, FACTS, Intelligent Controllers</td>
+            <td>Completed</td>
+          </tr>
+
+          <tr>
+            <td>6</td>
+            <td>Dr.M.Karthigaipandian</td>
+            <td>VLSI Device Modeling</td>
+            <td>Completed</td>
+          </tr>
+
+          <tr>
+            <td>7</td>
+            <td>Dr.T.Chinnadurai</td>
+            <td>Composite Materials & Polymers</td>
+            <td>Completed</td>
+          </tr>
+
+          <tr>
+            <td>8</td>
+            <td>Dr.S.Narendiran</td>
+            <td>Renewable energy & Soft Computing</td>
+            <td>Completed</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article hidden id="research3">
+      <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">ICE - PATENTS</h3>
+      <hr>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Title of Patent</th>
+            <th>Faculty Name</th>
+            <th>Date Applied</th>
+            <th>Status</th>
+            <th>Application No</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>A Method and a Device for enabling enhanced identification and communication through Sign language
+              between differently abled and normal persons</td>
+            <td>Ajith.B.Singh, P.Manju, K.Shanthi, K.Saravanakumar, S.Rajkumar, M.Shankar ganesh, B.Gowtham</td>
+            <td>05.04.2018</td>
+            <td>Journal Published</td>
+            <td>201841013055</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>A Multimode portable power bank with flexible solar panel</td>
+            <td>Dr.M.Karthiagi Pandian</td>
+            <td>01.12.2017</td>
+            <td>Journal Published</td>
+            <td>201741041946</td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td>Kitchen Sink Drainer 2</td>
+            <td>Ajith.B.Singh, P.Manju, S.Jananisri, M.Jayalaxmi, R.Swathi</td>
+            <td>21.09.2017</td>
+            <td>Applied</td>
+            <td>297756</td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td>Kitchen Sink Drainer 1</td>
+            <td>Ajith.B.Singh, P.Manju, S.Jananisri, M.Jayalaxmi, R.Swathi</td>
+            <td>21.09.2017</td>
+            <td>Applied</td>
+            <td>297755</td>
+          </tr>
+
+          <tr>
+            <td>5</td>
+            <td>Hair Grabber System</td>
+            <td>Ajith.B.Singh, P.Manju, K.Shanthi, S.Deebika, Surya, Vigneshwaran</td>
+            <td>11.08.2017</td>
+            <td>Applied</td>
+            <td>296608</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article hidden id="research4">
+      <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">ICE - JOURNALS PUBLICATIONS</h3>
+      <hr>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Author Name</th>
+            <th>Title of The Paper</th>
+            <th>Journal Name</th>
+            <th>Issn No</th>
+            <th>Vol/Issue</th>
+            <th>Year</th>
+            <th>Wos/Scopus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Mr.Ajith.B.Singh</td>
+            <td>Fuzzified Control of Deaerator System in Power Plant & Comparative Analysis with PID Control Scheme</td>
+            <td>Journal of Advanced Research in Dynamical & Control Systems</td>
+            <td>Special Issue 1, pp. 923-931</td>
+            <td>Volume 11</td>
+            <td>2019</td>
+            <td>Scopus</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>Ms.M.Vidya</td>
+            <td>Design of Low-Cost Effective ECG Signal Acquisition System</td>
+            <td>International Journal of Innovations in Engineering & Technology</td>
+            <td>Issue 2, pp. 023-030</td>
+            <td>Volume 12</td>
+            <td>2019</td>
+            <td>ResearcherID</td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td>Mr.S.Dilip Kumar</td>
+            <td>Automated Pesticide Spraying, Bird Repellent and Watering System for Agriculture</td>
+            <td>International Journal of Innovative Research in Computer and Communication Engineering </td>
+            <td>Issue 1, pp. 034-039</td>
+            <td>Volume 7</td>
+            <td>2019</td>
+            <td>ResearcherID</td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td>Dr.M.Karthigai Pandian Dr.T.Chinnadurai</td>
+            <td>Design and Optimization of Rectangular Patch Antenna Based on FR4, Teflon and Ceramic Substrates</td>
+            <td>Recent Advances in Electrical and Electronics Engineering</td>
+            <td>doi - 10.2174/2352096511666180705121554 doi - </td>
+            <td>doi - 10.2174/2352096511666180705121554</td>
+            <td>2018</td>
+            <td>Scopus</td>
+          </tr>
+
+          <tr>
+            <td>5</td>
+            <td>Dr.T. Chinnadurai Dr.M.Karthigai Pandian Ms.S.Deebika</td>
+            <td>Analyzing the Weld strength of Ultrasonic Polymer Welding using Artificial Neural Networks</td>
+            <td>Materials Today: Proceedings</td>
+            <td>Issue 14, pp.28320-28327</td>
+            <td>Volume 5</td>
+            <td>2018</td>
+            <td>Scopus</td>
+          </tr>
+
+          <tr>
+            <td>6</td>
+            <td>Dr.T.Chinnadurai Dr.M.Karthigai Pandian</td>
+            <td>Ultrasonically Welded and Nonwelded Polypropylene and PC/ABS Blend Thermal Analysis</td>
+            <td>Journal of Thermal Analysis and Calorimetry</td>
+            <td>doi - 10.1007/s10973-018-7052-y</td>
+            <td>doi - 10.1007/s10973-018-7052-y</td>
+            <td>2018</td>
+            <td>Web of Science (SCI)</td>
+          </tr>
+
+          <tr>
+            <td>7</td>
+            <td>Mr.J.Dhanaselvam</td>
+            <td>Design Concepts of DFIG Based Wind Turbine Control System using Neuro Fuzzy controller for Industrial
+              Application</td>
+            <td>International Journal of Mechanical and Reduction Engineering Research and Development</td>
+            <td>Issue 2, pp. 167-172</td>
+            <td>Volume 8</td>
+            <td>2018</td>
+            <td>Scopus</td>
+          </tr>
+
+          <tr>
+            <td>8</td>
+            <td>Dr.T.Chinnadurai</td>
+            <td>Analysis of Symmetric Multilevel Inverter using Uni-polar Pulse Width Modulation for Photovoltaic
+              Applications</td>
+            <td>Rendus de I’Academiebulgare des Sciences</td>
+            <td>Issue 2, pp. 252-260</td>
+            <td>Volume 71</td>
+            <td>2018</td>
+            <td>Scopus</td>
+          </tr>
+
+          <tr>
+            <td>9</td>
+            <td>Dr.T.Chinnadurai</td>
+            <td>Experimental Studies on Thermo- Mechanical Behavior of U-Welded PC/ABS Polymer Blends</td>
+            <td>Silicon</td>
+            <td>Issue 5, pp. 1937-1948</td>
+            <td>Volume 10</td>
+            <td>2017</td>
+            <td>Web of Science (SCI)</td>
+          </tr>
+
+          <tr>
+            <td>10</td>
+            <td>Mr.S.Dilip Kumar</td>
+            <td>Soft Computing as a Tool for Classification of Cardio Vascular Abnormalities</td>
+            <td>International Journal of Scientific Research in Computer Science, Engineering and Information Technology
+            </td>
+            <td>Issue 5, pp. 930-934</td>
+            <td>Volume 2</td>
+            <td>2017</td>
+            <td>ResearcherID</td>
+          </tr>
+
+          <tr>
+            <td>11</td>
+            <td>Mr.Ajith.B.Singh Ms.S.Deebika Ms.S.Jananisri Ms.R.Swathi</td>
+            <td>Split Range Control for Mobile Room Heating System</td>
+            <td>International Journal of Control Theory and Application</td>
+            <td>Issue 2, pp. 417-425</td>
+            <td>Volume 10</td>
+            <td>2017</td>
+            <td>Scopus</td>
+          </tr>
+
+          <tr>
+            <td>12</td>
+            <td>Mr.Ajith.B.Singh Ms.K.Shanthi</td>
+            <td>Propellent Mixing and Loading in Pyrotechs using Virtual Instrumentation</td>
+            <td>International Journal of Control Theory and Application</td>
+            <td>Issue 2, pp. 407-415</td>
+            <td>Volume 10</td>
+            <td>2017</td>
+            <td>Scopus</td>
+          </tr>
+
+          <tr>
+            <td>13</td>
+            <td>Mr.S.Dilip Kumar Ms.M.Vidya</td>
+            <td>Study and Analysis of Various Pre- Processing Techniques in Breast Cancer Detection using Image
+              Processing</td>
+            <td>International Journal for Research in Applied Science and Engineering Technology</td>
+            <td>Issue 5, pp. 495-502</td>
+            <td>Volume 4</td>
+            <td>2016</td>
+            <td>ResearcherID</td>
+          </tr>
+
+          <tr>
+            <td>14</td>
+            <td>Ms.R.Swathi Ms.S.Jananisri Ms.S.Deebika</td>
+            <td>Overview of an Adaptive Filter using Distributed Arithmetic with Offset Binary Coding</td>
+            <td>International Research Journal of Engineering and Technology</td>
+            <td>Issue 5, pp. 1612-1618</td>
+            <td>Volume 3</td>
+            <td>2016</td>
+            <td>ResearcherID</td>
+          </tr>
+
+          <tr>
+            <td>15</td>
+            <td>Ms.R.Kavipriya</td>
+            <td>PID Controller Design for Boiler Drum Level Control</td>
+            <td>International Journal for Science and Research in Technology</td>
+            <td>Issue 9, pp. 142-148</td>
+            <td>Volume 1</td>
+            <td>2015</td>
+            <td>ResearcherID</td>
+          </tr>
+
+          <tr>
+            <td>16</td>
+            <td>Ms.K.Shanthi</td>
+            <td>Reduction of Data Losses and Packet Dropouts in Networked Control Systems Using H∞ Controller</td>
+            <td>International Journal for Science and Research in Technology</td>
+            <td>Issue 9, pp. 137-141</td>
+            <td>Volume 1</td>
+            <td>2015</td>
+            <td>ResearcherID</td>
+          </tr>
+
+          <tr>
+            <td>17</td>
+            <td>Ms.R.Sumitharaj Ms.K.Shanthi</td>
+            <td>Segmentation of Brain Tumour from MRI Images by Improved Fuzzy System</td>
+            <td>International Journal of Advances in Engineering and Technology</td>
+            <td>Issue 3, pp. 967-973</td>
+            <td>Volume 7</td>
+            <td>2014</td>
+            <td>ResearcherID</td>
+          </tr>
+
+          <tr>
+            <td>18</td>
+            <td>Dr.S.Muthu Vijaya Pandian</td>
+            <td>Considering Transmission Loss for an Economic Dispatch Problem without Valve Point Loading Using an
+              EP-EPSO Algorithm</td>
+            <td>Turkish Journal of Electrical Engineering and Computer Sciences</td>
+            <td>Issue 2, pp. 1259-1267</td>
+            <td>Volume 20</td>
+            <td>2012</td>
+            <td>Scopus</td>
+          </tr>
+
+          <tr>
+            <td>19</td>
+            <td>Ms.N.S.Abinaya</td>
+            <td>Design of Float Image Level Transmitter for Level Measurement using Image Processing Techniques</td>
+            <td>Sensors & Transducers</td>
+            <td>Issue 10, pp. 33-40Volume 145</td>
+            <td>Volume 145</td>
+            <td>2012</td>
+            <td>Scopus</td>
+          </tr>
+
+          <tr>
+            <td>20</td>
+            <td>Dr.S.Muthu Vijaya Pandian</td>
+            <td>An Efficient Particle Swarm Optimization Technique to solve Combined Economic Dispatch Problem</td>
+            <td>European Journal of Scientific Research</td>
+            <td>Issue 2, pp. 187-192</td>
+            <td>Volume 54</td>
+            <td>2011</td>
+            <td>Scopus</td>
+          </tr>
+
+          <tr>
+            <td>21</td>
+            <td>Dr.S.Muthu Vijaya Pandian</td>
+            <td>An Evolutionary Programming Based Efficient Particle Swarm Optimization for Economic Dispatch Problem
+              with Valve
+              Point Loading</td>
+            <td>European Journal of Scientific Research</td>
+            <td>Issue 3, pp. 385-397</td>
+            <td>Volume 52</td>
+            <td>2011</td>
+            <td>Scopus</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </article>
+
+    <article hidden id="research5">
+      <h3 style="margin-left: 10px;font-weight: 900;color: darkorange; text-align: justify;">CITATION STATISTICS</h3>
+      <hr>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Faculty Name</th>
+            <th>Google Scholar URL</th>
+            <th>Scopus</th>
+            <th>Publons</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Dr.P.Manju</td>
+            <td><a href="https://scholar.google.co.in/citations?user=8sLr6VYAAAAJ&hl=en">
+                https://scholar.google.co.in/citations?user=8sLr6VYAAAAJ&hl=en</a></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>Dr M Karthigai Pandian</td>
+            <td><a
+                href="https://scholar.google.co.in/citations?hl=en&user=BdVWD78AAAAJ&view_op=list_works&citft=
+                                    1&citft=2&email_for_op=karthickpandian%40gmail.com&gmla=AJsN-F7OcSCLcSVeaD4QTX_GyvX5LE3HfqPPhyt4DA6g
+                                    BVgGT6nWQYGmMgnNmBIdJm3mVF_aQ__ej7NO5CTI-XyK1wdj4zb56VtMm8RmvtHI-Kj9fIiMhMk3itGBqrHh-xKBdpXs80L9CHGQa
+                                    vJmCu3_OnGmHE4FRc5Ae9w096bMLqCg8xaGyogh2Zl50lOrj3-gByeg-m-n7GWI2y5OPeRfE51ulq2CMHnROdRXbtroQjYEZOm5O6
+                                    XXYIOZmGhPz46a5q">https://scholar.google.co.in/citations?hl=en&user=BdVWD78AAAAJ&view_op=list_
+                works&citft=1&citft=2&email_for_op=karthickpandian%40gmail.com&gmla=AJsN-F7OcSCLcSVeaD4QTX_
+                GyvX5LE3HfqPPhyt4DA6gBVgGT6nWQYGmMgnNmBIdJm3mVF_aQ__ej7NO5CTI-XyK1wdj4zb56VtMm8RmvtHI-
+                Kj9fIiMhMk3itGBqrHh-xKBdpXs80L9CHGQavJmCu3_OnGmHE4FRc5Ae9w096bMLqCg8xaGyogh2Zl50lOrj3-gByeg-m-
+                n7GWI2y5OPeRfE51ulq2CMHnROdRXbtroQjYEZOm5O6XXYIOZmGhPz46a5q</a></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td>Dr.T.Chinnadurai</td>
+            <td><a href="https://scholar.google.co.in/citations?hl=en&authuser=1&user=P38-QosAAAAJ">
+                https://scholar.google.co.in/citations?hl=en&authuser=1&user=P38-QosAAAAJ</a></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td>Dr.S.Narendiran</td>
+            <td><a
+                href="https://scholar.google.co.in/citations?hl=en&user=34jBoZQAAAAJ&view_op=list_
+                                  works&sortby=pubdate">https://scholar.google.co.in/citations?hl=en&user=34jBoZQAAAAJ&view_op=list_
+                works&sortby=pubdate</a></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>5</td>
+            <td>Mr.S.Dilip Kumar</td>
+            <td><a href="https://scholar.google.co.in/citations?user=mdOjFosAAAAJ&hl=en">
+                https://scholar.google.co.in/citations?user=mdOjFosAAAAJ&hl=en
+              </a></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>6</td>
+            <td>Ms.M.Vidya</td>
+            <td><a
+                href="https://scholar.google.co.in/citations?hl=en&view_op=list_works&authuser=1&gmla=AJsN-
+                                    F6Q6istd0t2RQunC9_yHEzPNM1M9fGP3FIWUSDCUXOvlllv7jQF3dwKBdqhcedeJD15wQtTu3YTx6HeijAQiglZUwl0oA&user=
+                                    8uOo-LoAAAAJ">https://scholar.google.co.in/citations?hl=en&view_op=list_works&authuser=1&gmla=AJsN-
+                F6Q6istd0t2RQunC9_yHEzPNM1M9fGP3FIWUSDCUXOvlllv7jQF3dwKBdqhcedeJD15wQtTu3YTx6HeijAQiglZUwl0oA&user=
+                8uOo-LoAAAAJ</a></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>7</td>
+            <td>Ms.S.Deebika</td>
+            <td><a href="https://scholar.google.co.in/citations?user=EoQQcvkAAAAJ&hl=en&authuser=1">
+                https://scholar.google.co.in/citations?user=EoQQcvkAAAAJ&hl=en&authuser=1
+              </a></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>8</td>
+            <td>Ms.S.Jananisri</td>
+            <td><a href="https://scholar.google.co.in/citations?user=nTBSo3oAAAAJ&hl=en&authuser=1">
+                https://scholar.google.co.in/citations?user=nTBSo3oAAAAJ&hl=en&authuser=1
+              </a></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>9</td>
+            <td>Ms.M.Jayalaxmi</td>
+            <td><a href="https://scholar.google.co.in/citations?view_op=list_works&hl=en&authuser=1&user=
+                                    urhzBdkAAAAJ&gmla=AJsN-F4dQAoqhVfMqw7x9bTQ4opsdpBmRj9WTV875K57jGyiIjsbUX5gS65mD-N4MvCiNZ0_jMn_
+                                    9YpYzTIwnvI-jJ-3PduYcEiTkU-p49tRwyALYMTBug5uOSUcrLhf0kLqmu-Yez9Z">
+                https://scholar.google.co.in/citations?view_op=list_works&hl=en&authuser=1&user=urhzBdkAAAAJ&gmla=
+                AJsN-F4dQAoqhVfMqw7x9bTQ4opsdpBmRj9WTV875K57jGyiIjsbUX5gS65mD-N4MvCiNZ0_jMn_9YpYzTIwnvI-jJ-
+                3PduYcEiTkU-p49tRwyALYMTBug5uOSUcrLhf0kLqmu-Yez9Z</a></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>10</td>
+            <td>Mr.J.Dhanaselvam</td>
+            <td><a href="https://scholar.google.co.in/citations?user=qttqYr8AAAAJ&hl=en">
+                https://scholar.google.co.in/citations?user=qttqYr8AAAAJ&hl=en
+              </a></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>11</td>
+            <td>Mr.Ajith.B.Singh</td>
+            <td><a href="https://scholar.google.co.in/citations?user=Jt8RgyAAAAAJ&hl=en">
+                https://scholar.google.co.in/citations?user=Jt8RgyAAAAAJ&hl=en
+              </a></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>12</td>
+            <td>Mr.K.Saravanakumar</td>
+            <td><a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=88f2tpYAAAAJ">
+                https://scholar.google.com/citations?view_op=list_works&hl=en&user=88f2tpYAAAAJ
+              </a></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>13</td>
+            <td>Mr.R.Rajesh</td>
+            <td>-</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>14</td>
+            <td>Ms K.SHANTHI</td>
+            <td><a href="https://scholar.google.co.in/citations?user=Lt_i5QYAAAAJ&hl=en&authuser=1">
+                https://scholar.google.co.in/citations?user=Lt_i5QYAAAAJ&hl=en&authuser=1
+              </a></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article hidden id="research6">
+      <h3 style="margin-left: 10px;font-weight: 900;color: darkorange; text-align: justify;">
+        ICE - BOOKS PUBLISHED</h3>
+      <hr>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Author Name</th>
+            <th>Title of the Book</th>
+            <th>Publisher Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Ms.K.Shanthi</td>
+            <td>PROGRAMMABLE LOGIC AND DISTRIBUTED CONTROL SYSTEMS</td>
+            <td>ISBN - 978-93-80430-15-7, 2014, CBA Publisher, Chennai.</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>Ms.K.Shanthi</td>
+            <td>COMPUTER CONTROL OF PROCESS</td>
+            <td>ISBN - 978-93-80430-23-2, 2011, CBA Publisher, Chennai.</td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td>Mr.Ajith.B.Singh</td>
+            <td>CONTROLLERS FOR INSTRUMENTATION</td>
+            <td>ISBN - 978-3-659-27744-3, 2018, LAP Lambert Academic publishing, Germany.</td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td>Ms.K.Shanthi</td>
+            <td>BIOMEDICAL INSTRUMENTATION</td>
+            <td>ISBN - 978-93-80430-31-7, 2018, CBA Publisher, Chennai.</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article hidden id="research7">
+      <h3 style="margin-left: 10px;font-weight: 900;color: darkorange; text-align: justify;">
+        ICE - BOOKS PUBLISHED</h3>
+      <hr>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Group Name</th>
+            <th>Group Head</th>
+            <th>Group Members</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Process Control & Instrumentation</td>
+            <td>Dr.P.MANJU</td>
+            <td>
+              <ul>
+                <li>Mr.Ajith.B.Singh</li>
+                <li>Ms.K.Shanthi</li>
+                <li>Dr.S.Narendiran</li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>Device Modeling & Nanotechnology</td>
+            <td>Dr.M.KARTHIGAIPANDIAN</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td>Intelligent Control & Renewable Energy</td>
+            <td>Dr.T.CHINNADUARI</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+    <article hidden id="events">
+      <h3 style="margin-left: 10px;font-weight: 900;color: darkorange; text-align: justify;">EVENTS</h3>
+      <hr>
+      <div class="grid">
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/2_37OWi34.jpg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">INDUSTRIAL TRAINING PRESENTATION</h4>
+            <p style="padding: 5px;">2019-07-22</p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/2_37OWi34.jpg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/2_37OWi34.jpg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            link</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            style=" width:330px; background-color:rgb(129, 132, 134) ;padding:5px;border-radius: .3em">
+            <img src="http://117.239.103.188/media/image/1_QqcqmII.jpg" alt=""
+                style="height: 330px; width: 330px;border-radius: .3em">
+            <h4 style="color: white; padding: 5px;  ">
+              CURRENT TRENDS IN ENGINEERING FIELDS</h4>
+            <p style="padding: 5px;">2019-07-22</p>
+            <div style="display: flex;justify-content: space-evenly;padding: 5px;">
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/1_QqcqmII.jpg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p;   font-weight:bold; color:white ">DOWNLOAD
+                            BROUCHER</button></a>
+                </div>
+                <div class="button">
+                    <a href="http://117.239.103.188/media/image/1_QqcqmII.jpg">
+                        <button type="button"
+                            style="background-color: blue; padding:10px; font-size:15p; font-weight:bold; color:white ">
+                            link</button></a>
+
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </article>
+
+    <article hidden id="co-curricular">
+      <a href="http://117.239.103.188/media/ICE_student_achievement_co-curricular_2018-19.pdf">
+        http://117.239.103.188/media/ICE_student_achievement_co-curricular_2018-19.pdf</a>
+    </article>
+
+    <article hidden id="sports">
+      <a href="http://117.239.103.188/media/ICE_sports_2018-19.pdf">
+        http://117.239.103.188/media/ICE_sports_2018-19.pdf</a>
+    </article>
+
+    <article hidden id="placements">
+      <h3 style="margin-left: 10px;font-weight: 900;color: blue;">
+        PLACEMENT STATISTICS</h3>
+      <hr>
+      <div style="display: flex;">
+        <a style="display: flex;" href="http://117.239.103.188/media/Placement_details_2019.pdf">
+          <i class="material-icons" style="color:skyblue;">
+            arrow_forward</i>
+          PLACED STUDENTS IN THE YEAR OF - ICE PLACEMENT - 2018 - 19</a>
+      </div>
+      <br>
+      <br><br>
+
+      <h3 style="margin-left: 10px;font-weight: 900;color:blue;">
+        OUR RECRUITERS</h3>
+      <hr>
+      <img src="http://117.239.103.188/media/image/ibm.png"
+        style="height:190px; width:190px;
+                                               margin-left: 300px;margin-top:10px;box-shadow:-4px -4px 0 1px whitesmoke;">
+    </article>
+
+    <article hidden id="testimonials">
+      <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">
+        TESTIMONIALS</h3><hr>
+        <div style="display: flex; padding: 20px;">
+          <img src="http://117.239.103.188/media/image/siddharth.jpg" style=" width:200px;height:200px;border-radius:50%;">
+          <div style="margin-left:10px;">
+            <p>Mr. Siddharth (2013 - 2017)(Performance Engineer, Accenture)</p>
+            <p>My overall experience in Department of Instrumentation and control engineering is very positive.The department gave me a 
+              favorable circumstance to enhance my technical skills, managerial skills and soft skills and supported me in all possible 
+              way.They respect ideas and views of each individual.I feel proud to be the product of ICE Department.</p><br><hr>
+          </div>
+        </div>
+        <br>
+
+        <div style="display: flex; padding: 20px;">
+          <img src="http://117.239.103.188/media/image/aadith.jpeg" style=" width:200px;height:200px;border-radius:50%;">
+          <div style="margin-left:10px;">
+            <p>Mr. Aadhith V.Sathvin (2013 - 2017)(Student - Film and Television Institute of India, Pune)</p>
+            <p>It is here where I got my time ,space and people what collected myself towards what I wanted to do in life. With an 
+              engineering spirit one here can steer oneself to interesting opportunities especially in the areas of clean sustainable 
+              energy and climate solutions.</p><br><hr>
+          </div>
+        </div>
+        <br>
+
+        <div style="display: flex; padding: 20px;">
+          <img src="http://117.239.103.188/media/image/Edwin_Shaju.png" style=" width:200px;height:200px;border-radius:50%;">
+          <div style="margin-left:10px;">
+            <p>Mr. Edwin Shaju (2012 - 2016)(Training Service Engineer @ CHEMTROLS)</p>
+            <p>The Department of Instrumentation & Control Engineering provides a vibrant atmosphere for overall personality 
+              enhancement. It has been a phenomenal place to study where everyday is an opportunity & learning experience. Graduates 
+              take with them experience, expertize, knowledge & insight helping them along the run of life.</p><br><hr>
+          </div>
+        </div>
+        <br>
+
+        <div style="display: flex; padding: 20px;">
+          <img src="http://117.239.103.188/media/image/harish.jpg" style=" width:200px;height:200px;border-radius:50%;">
+          <div style="margin-left:10px;">
+            <p>Mr. Harish Karunanithy (2013 – 2017)(Financial Aid Advisor, AllinAll Ingredients, Ireland)</p>
+            <p>I strongly believe that there are better and rigorous ways of transforming novice students into expert Instrumentation 
+              and Control engineers. This department is like a family. Professors are very highly personable and also motivated. I felt 
+              like they really cared about me as a person. This department is a great place for people with new ideas who want a 
+              supportive environment. Hey Juniors, "Give yourself time to really explore the various opportunities available in this 
+              field matching your goals & interests. </p><br><hr>
+          </div>
+        </div>
+        <br>
+
+        <div style="display: flex; padding: 20px;">
+          <img src="http://117.239.103.188/media/image/kavi.jpg" style=" width:200px;height:200px;border-radius:50%;">
+          <div style="margin-left:10px;">
+            <p>Ms. Kavitha Raman(2011 - 2015)(Research Engineer (Non Linear Control), The University of Texas, Dallas )</p>
+            <p>SKCT and ICE have given me a lot of wonderful memories. It has helped me a lot to reach where i am now. I sincerely feel 
+              grateful to the teachers who made me reach this position in my life. I thank SKCT and ICE department for being instrumental  
+              in my career.</p><br><hr>
+          </div>
+        </div>
+        <br>
+
+        <div style="display: flex; padding: 20px;">
+          <img src="http://117.239.103.188/media/image/vani.jpg" style=" width:200px;height:200px;border-radius:50%;">
+          <div style="margin-left:10px;">
+            <p>Ms. Vanishree (2013 - 2017)(Programmer Analyst @ CTS)</p>
+            <p>Instrumentation and Control Engineering department has got a dynamic atmosphere and energetic people around always. The 
+              exceptional programs and teaching methodologies have given me the confidence to pursue my career in a constructive way. I 
+              am deeply grateful to all the faculty members and my friends for their constant encouragement and support. I wish each 
+              student the best of luck in all their future endeavors.</p><br><hr>
+          </div>
+        </div>
+        <br>
+
+        <div style="display: flex; padding: 20px;">
+          <img src="http://117.239.103.188/media/image/marina.jpg" style=" width:200px;height:200px;border-radius:50%;">
+          <div style="margin-left:10px;">
+            <p>Ms. Marina Sophia(2014 - 2018)(Instrumentation Design Engineer, Kavin Engineering)</p>
+            <p>Four years of college happened to be the most blessed time. Being an Instrumentation engineer now, was possible only by 
+              the experience we gained in four years. Teaching, supporting, encouraging was our department’s key roles. It took us some 
+              time to understand what exactly is I&C, but pretty sooner we realised that I&C was one of the best courses till date and 
+              has big impact on the future as well. One interesting fact is that Instrumentation and control is evolving around us every 
+              day. Not just learning, brought us knowledge in our domain, but practically implementations made us stronger as 
+              Instrumentation engineers. Innovation in engineering is definitely possible in our I&C domain. We had enough time to 
+              learn, understand and implement. So, I feel that I&C is unique, very rare but one of the best emerging courses that is 
+              selectively started in very few reputed colleges, to lighten up the lucky Instrumentation engineers to be.</p><br><hr>
+          </div>
+        </div>
+        <br>
+
+        <div style="display: flex; padding: 20px;">
+          <img src="http://117.239.103.188/media/image/ravi.jpg" style=" width:200px;height:200px;border-radius:50%;">
+          <div style="margin-left:10px;">
+            <p>Mr. Ravi Shankar (2012 - 2016)(Programmer Analyst @ CTS )</p>
+            <p>SKCT has given me an astonishing platform for the overall growth and development. The campus has excellent infrastructure 
+              and is very beautiful with perfect blend of nature. Instrumentation & Control Engineering Department is unmatched. The 
+              professors are very friendly, professional and inspiring. The faculty members have always revitalized us to learn through 
+              exploits which were very helpful for us throughout our studies. Academics are in congruity with the latest industry 
+              trends. It's been a privilege to be a part of this esteemed Department.</p><br><hr>
+          </div>
+        </div>
+        <br>
+
+        <div style="display: flex; padding: 20px;">
+          <img src="http://117.239.103.188/media/image/niranjan.jpg" style=" width:200px;height:200px;border-radius:50%;">
+          <div style="margin-left:10px;">
+            <p>Mr. Niranjan (2014 - 2018)(Artist Manager, Greenroom Talent Network Pvt.Ltd)</p>
+            <p>My four years at SKCT in the Dept. Of ICE have been one of the best learning experiences. I have gained a lot of insight 
+              into the various nuances of Instrumentation. I would love to thank all the faculty for their guidance and support in all 
+              aspects. A special note of gratitude to our HOD for her constant motivation and emphasis on overall development and 
+              unparalleled placement efforts. I am indeed proud and grateful to have graduated from such a vibrant and dynamic 
+              department.</p><br><hr>
+          </div>
+        </div>
+        <br>
+
+        <div style="display: flex; padding: 20px;">
+          <img src="http://117.239.103.188/media/image/gowthaam.jpg" style=" width:200px;height:200px;border-radius:50%;">
+          <div style="margin-left:10px;">
+            <p>Mr. Gowthaam Nachimuthu (2011 - 2015)(Research Assistant, Germany)</p>
+            <p>My four years of education & experience in the department of ICE @ SKCT campus is summed up in 3 words : Friendly - 
+              Stress Free - & Good Future. I convey my heartly wishes to all my juniors & wish everyone the best for their 
+              future.</p><br><br><hr>
+          </div>
+        </div>
+        <br>
+
+        <div style="display: flex; padding: 20px;">
+          <img src="http://117.239.103.188/media/image/gow.JPG" style=" width:200px;height:200px;border-radius:50%;">
+          <div style="margin-left:10px;">
+            <p>Mr. Gowtham Mariappa.R (2012 - 2016)(Program Analyst @ CTS)</p>
+            <p>The Department of Instrumentation & Control Engineering focuses on making the world look more simpler by the process of 
+              automation. My ICE department has been a great launchpad for young aspirants who dream of building up a future where 
+              manual efforts could be reduced by the intervention of advanced control systems and technologies. The department exposes 
+              the students of ICE to have a vast experience & exposure to the world of automation..</p><br><hr>
+          </div>
+        </div>
+        <br>
+
+        <div style="display: flex; padding: 20px;">
+          <img src="http://117.239.103.188/media/image/Vijay_Anand.jpg" style=" width:200px;height:200px;border-radius:50%;">
+          <div style="margin-left:10px;">
+            <p>Mr. Vijay Anand (2013 - 2017)(Pursuing Master of Design, Specializing in Visual Media @ IIT Kanpur)</p>
+            <p>Minimum class strength made students to be well connected with staff members. The department provides enough space for 
+              anyone to aspire & learn things beyond the curriculum.</p><br><br><hr>
+          </div>
+        </div>
+        <br>
+        </article>
+
+        <article hidden id="gallery">
+          <h3 style="margin-left: 10px;font-weight: 900;color: darkorange;">
+            GALLERY</h3><hr>
+            <div class="imggrid">
+          <img src="http://117.239.103.188/media/image/green.png" style="height:250px; width:290px;">
+          <img src="http://117.239.103.188/media/image/save.png" style="height:250px; width:290px;">
+          <img src="http://117.239.103.188/media/image/swach.png" style="height:250px; width:290px;"></div>
+          <div class="imggrid">
+          <img src="http://117.239.103.188/media/image/selfie.png" style="height:250px; width:290px;">
+          <img src="http://117.239.103.188/media/image/tiger.png" style="height:250px; width:290px;">
+          <img src="http://117.239.103.188/media/image/marthtu.png" style="height:250px; width:290px;"></div>
+          <div class="imggrid">
+          <img src="http://117.239.103.188/media/image/mkp.png" style="height:250px; width:290px;">
+          <img src="http://117.239.103.188/media/image/orp.png" style="height:250px; width:290px;"></article></div>
+
+
+  </main>
+
+  <script src="dept.js"></script>
+  <script type="text/javascript">
+    const slider = document.querySelector(".slider");
+    const nextBtn = document.querySelector(".next-btn");
+    const prevBtn = document.querySelector(".prev-btn");
+    const slides = document.querySelectorAll(".slide");
+    const slideIcons = document.querySelectorAll(".slide-icon");
+    const numberOfSlides = slides.length;
+    var slideNumber = 0;
+
+    //image slider next button
+    nextBtn.addEventListener("click", () => {
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+      slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove("active");
+      });
+
+      slideNumber++;
+
+      if (slideNumber > (numberOfSlides - 1)) {
+        slideNumber = 0;
+      }
+
+      slides[slideNumber].classList.add("active");
+      slideIcons[slideNumber].classList.add("active");
+    });
+
+    //image slider previous button
+    prevBtn.addEventListener("click", () => {
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+      slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove("active");
+      });
+
+      slideNumber--;
+
+      if (slideNumber < 0) {
+        slideNumber = numberOfSlides - 1;
+      }
+
+      slides[slideNumber].classList.add("active");
+      slideIcons[slideNumber].classList.add("active");
+    });
+
+    //image slider autoplay
+    var playSlider;
+
+    var repeater = () => {
+      playSlider = setInterval(function () {
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+        slideIcons.forEach((slideIcon) => {
+          slideIcon.classList.remove("active");
+        });
+
+        slideNumber++;
+
+        if (slideNumber > (numberOfSlides - 1)) {
+          slideNumber = 0;
+        }
+
+        slides[slideNumber].classList.add("active");
+        slideIcons[slideNumber].classList.add("active");
+      }, 4000);
+    }
+    repeater();
+
+    //stop the image slider autoplay on mouseover
+    slider.addEventListener("mouseover", () => {
+      clearInterval(playSlider);
+    });
+
+    //start the image slider autoplay again on mouseout
+    slider.addEventListener("mouseout", () => {
+      repeater();
+    });
+  </script><script src="dept.js"></script>
+  <script type="text/javascript">
+    const slider = document.querySelector(".slider");
+    const nextBtn = document.querySelector(".next-btn");
+    const prevBtn = document.querySelector(".prev-btn");
+    const slides = document.querySelectorAll(".slide");
+    const slideIcons = document.querySelectorAll(".slide-icon");
+    const numberOfSlides = slides.length;
+    var slideNumber = 0;
+
+    //image slider next button
+    nextBtn.addEventListener("click", () => {
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+      slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove("active");
+      });
+
+      slideNumber++;
+
+      if (slideNumber > (numberOfSlides - 1)) {
+        slideNumber = 0;
+      }
+
+      slides[slideNumber].classList.add("active");
+      slideIcons[slideNumber].classList.add("active");
+    });
+
+    //image slider previous button
+    prevBtn.addEventListener("click", () => {
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+      slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove("active");
+      });
+
+      slideNumber--;
+
+      if (slideNumber < 0) {
+        slideNumber = numberOfSlides - 1;
+      }
+
+      slides[slideNumber].classList.add("active");
+      slideIcons[slideNumber].classList.add("active");
+    });
+
+    //image slider autoplay
+    var playSlider;
+
+    var repeater = () => {
+      playSlider = setInterval(function () {
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+        slideIcons.forEach((slideIcon) => {
+          slideIcon.classList.remove("active");
+        });
+
+        slideNumber++;
+
+        if (slideNumber > (numberOfSlides - 1)) {
+          slideNumber = 0;
+        }
+
+        slides[slideNumber].classList.add("active");
+        slideIcons[slideNumber].classList.add("active");
+      }, 4000);
+    }
+    repeater();
+
+    //stop the image slider autoplay on mouseover
+    slider.addEventListener("mouseover", () => {
+      clearInterval(playSlider);
+    });
+
+    //start the image slider autoplay again on mouseout
+    slider.addEventListener("mouseout", () => {
+      repeater();
+    });
+  </script>
+
+</body>
+
+</html>

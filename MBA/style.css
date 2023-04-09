@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 15px;
+  
+}
+::-webkit-scrollbar-track-piece  {
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: .3em;
+  
+}
+
+::-webkit-scrollbar-thumb{
+  height: 50px;
+  background-color:grey;
+  border-radius: .3em;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-family: 'Poppins';
+}
+
+img{
+  width: 100%;
+  height: 100%;
+}
+
+article ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+article li{
+  padding: 0;
+  margin: 0;
+}
+h2{
+ 
+  font-size:35px;
+  font-weight: 600;
+  color:rgba(34, 33, 33, 0.753);
+  
+}
+h4{
+  padding-top: 20px;
+  padding-left: 5px;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+h3{
+ 
+  font-size:25px;
+  font-weight: 600;
+  color:rgba(34, 33, 33, 0.753);
+  padding: 0;
+  margin: 0;
+  
+
+}
+p{
+  font-size:15px; 
+  
+  font-weight:600 ;
+  letter-spacing: .8px;
+  text-align: justify;
+}
+h5{
+  margin: 5px;
+}
+
+#navButton {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    background: #000;
+    padding: 0 20px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px #000;
+    z-index: 3;
+
+
+}
+
+.line{
+    height: 3px;
+    width: 25px;
+    margin: 5px 0;
+   
+    background-color: #f37253;
+}
+
+.close-btn{
+    color: #f37253;
+    font-size: 1.5rem;
+    width: 25px;
+    
+
+
+}
+a{
+    text-decoration: none;
+   
+    
+    color: rgb(36, 36, 36);
+    font-weight: 600;
+    
+   
+}
+
+nav{
+    background-color: #d6d6d6;
+    position: fixed;
+    z-index: 999999;
+    height: 100%;
+   
+   
+    min-width: 23%;
+    overflow-y: auto;
+    opacity: 0;
+}
+
+
+#roadmap-container{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 5px;
+    border-bottom: 2px solid rgb(36, 36, 36);
+    text-align: center;
+}
+
+#roadmap-container a{
+   
+    font-size: 1.4rem;
+    color: rgb(36, 36, 36);
+    font-weight: 600;
+    margin: auto 10px;
+    text-align: center;
+}
+
+
+
+
+.menu-dropdown-item{
+    border: none;
+    outline: none;
+    background: none;
+    color: rgb(36, 36, 36);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+   
+    
+
+}
+
+
+
+.menu-dropdown-item i{
+    color: rgb(36, 36, 36);
+    position: relative;
+
+    top: 4px;
+    
+}
+
+.ic i{
+    color: #464646;
+    position: relative;
+    top: 5px;
+}
+
+
+
+
+.menulink li{
+    list-style: none;
+    margin: 5px 0;
+    color: rgb(36, 36, 36);
+    padding: 5px;
+   
+    font-size: 1.0rem;
+    
+}
+
+.menulink li:hover{
+    background-color: rgba(97, 97, 97, 0.247);
+}
+
+
+
+.menu-link{
+    margin: 5px 25px;
+    padding: 5px;
+    
+}
+.menu-link:hover{
+    background-color: rgba(0, 0, 0, 0.158);
+    border-radius: .2em;
+}
+
+
+
+.showNav{
+    animation: showNav 0.5s forwards;
+
+}
+
+.closeNav{
+    animation: closeNav 0.5s forwards;
+
+}
+
+header,h2,h4{
+    margin: 0;
+}
+
+h2{
+    font-weight: 400;
+    border-bottom: 1px solid #000;
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+p{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+main{
+    
+    margin-left: 350px;
+    
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+@keyframes showNav{
+    100%{
+        opacity: 1;
+    }
+
+}
+
+@keyframes closeNav{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+    
+
+
+@media screen and (min-width:700px){
+    nav{
+        animation: showNav !important;
+       
+        opacity: 1;
+        
+    }
+
+    #navButton{
+        display: none;
+    }
+   
+}
+
+@media screen and (max-width:700px){
+    main{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+.slider{
+    float: left;
+    position: relative;
+    background: #000116;
+    width: 100%;
+    min-height:100%;
+    
+    overflow: hidden;
+    
+  }
+  
+  .slider .slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0% at 0 100%);
+  }
+  
+  .slider .slide.active{
+    clip-path: circle(150% at 0 100%);
+    transition: 2s;
+  }
+  
+  .slider .slide img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slider .slide .info{
+    position: absolute;
+    color: #222;
+    background: rgba(255, 255, 255, 0.3);
+    width: 75%;
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+  }
+  
+  .slider .slide .info h2{
+    font-size: 2em;
+    font-weight: 800;
+  }
+  
+  .slider .slide .info p{
+    font-size: 1em;
+    font-weight: 400;
+  }
+  
+  .navigation{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease ;
+  }
+  
+  .slider:hover .navigation{
+    opacity: 0.8;
+  }
+  
+  .prev-btn, .next-btn{
+    
+    font-size: 2em;
+    color: #000;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .prev-btn{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+  }
+  
+  .next-btn{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  .navigation-visibility{
+    
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navigation-visibility .slide-icon{
+    
+    background: rgba(255, 255, 255, 1);
+    width: 20px;
+    height: 10px;
+    transform: translateY(-50px);
+    margin: 0 6px;
+    border-radius: 2px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+  }
+  
+  .navigation-visibility .slide-icon.active{
+    background: #4285F4;
+  }
+  
+  @media (max-width: 900px){
+    .slider{
+      width: 100%;
+    }
+  
+    .slider .slide .info{
+      position: relative;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media (max-width: 500px){
+    .slider .slide .info h2{
+      font-size: 1.8em;
+      line-height: 40px;
+    }
+  
+    .slider .slide .info p{
+      font-size: 0.9em;
+    }
+  }
+
+  .imgc{
+    width: 500%;
+    
+    padding: 3px;
+    margin: 10px 0;
+  }

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.bo{
+    font-family: 'poppins';
+    border-radius: .3em;
+    width: 320px;
+    background-color:whitesmoke;
+    border: 2px solid rgb(12, 104, 99);
+    transition-duration:1s;
+    transition-property:background-color,border-radius;
+    cursor: pointer;
+}
+
+.bo:hover{
+     background-color:whitesmoke;
+    border-radius:25%;
+    box-shadow: -4px 4px 5px rgb(44, 175, 226);
+}
+h2{
+    border:2px solid blue;
+    background-color: blue;
+    padding-bottom: 10px;
+    font-size:35px;
+    font-weight: 600;
+    color:white;
+    margin-left:20px;
+    margin-top:50px;
+    width:45%;
+    padding:10px;
+    
+    
+}
+.container{
+    margin:40px;
+    grid-column-gap:20px;
+    grid-row-gap:50px;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.imh img{
+    width:65px;
+    height: 65px;
+    padding: 15px;
+    padding-right:0;
+    padding-bottom: 0;
+    border-radius:.3em;
+    padding:25px;
+    
+}
+
+.imh{
+    display: flex;
+    border-radius:.3em;
+    justify-content: space-around;
+    transition-duration:1s;
+    transition-property: background-color,border-radius;
+    cursor: pointer;
+    
+}
+
+.imh h4{
+    margin: 35px auto;
+    font-weight:bold;
+    border-radius: .3em;
+    font-size: 23px;
+    color: rgb(11, 19, 94);
+}
+
+.lihs{
+    border-radius: .3em;
+   
+
+}
+.lihs ul{
+    padding: 15px 0px 15px 15px;
+    
+    margin: 5px 0;
+   
+}
+
+.lihs li{
+    list-style:none;
+    padding: 4px;
+    
+}
+
+.lihs li i{
+    padding:1px 5px;
+    font-size: 13px;
+}
+
+.lihs li a{
+    text-decoration: none;
+    color: black;
+}
+.lihs li a:hover{
+    color: blue;
+}
