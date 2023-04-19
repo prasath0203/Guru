@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <a href="#" class="logo">
+                <ion-icon name="fast-food-outline"></ion-icon>
+                Food Delight
+            </a>
+            <div class="items">
+                <ul>
+                    <li><a class ="active" href="#"><ion-icon name="home-outline"></ion-icon>Home</a></li>
+                    <li><a class = "btn" href="#" onclick="window.location.href='res.html';"><ion-icon name="restaurant-outline"></ion-icon>Restaurants</a></li>
+                    <li><a class = "btn" href="#" onclick="window.location.href='login.html';"><ion-icon name="person-circle-outline"></ion-icon>Log-In</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="back-ground">
+        <h1>Nothing Brings People <br> <I> &emsp;&emsp;TOGETHER </I> <br> &emsp;Than Good Food</h1>
+    </div>
+
+    <script>
+
+        var btn = document.getElementsByClassName("items");
+        var btnlist = document.getElementsByClassName("btn");
+
+        for(var i=0;i<btnlist.length;i++){
+            btnlist[i].addEventListener('click', function (){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace("active");
+            this.className += "active";
+            })
+
+        }
+    </script>
+</body>
+</html>
